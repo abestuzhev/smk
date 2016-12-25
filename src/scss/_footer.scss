@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  height: 320px;
+  background: url($img-dir + 'footer-bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+
+  &_logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &-contact {
+    margin-left:auto;
+    margin-right:auto;
+    color: #FFF;
+    text-align: center;
+
+    &_address {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    &_number {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+}
