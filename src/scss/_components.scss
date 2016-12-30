@@ -1,4 +1,5 @@
 .c-card-object {
+  display: inline-block;
   box-sizing: border-box;
   width: 210px;
   background-color: #fff;
@@ -192,3 +193,137 @@
   }
 
 }//c-icon-object
+
+
+
+//c-button
+.l-button {
+  text-align: center;
+}
+.c-button {
+  display: inline-block;
+  color: #1E1E1E;
+  font-family: "Stem";
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: .6em .7em;
+  background-color: #FBBB00;
+  border-radius: 2px;
+}
+//end c-button
+
+//c-title
+.c-title {
+  text-align: center;
+  padding: .8em 0;
+
+  &_h2 {
+    display: inline-block;
+    color: #1D1D1D;
+    font-family: "Stem";
+    font-size: 1.375em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1.2px;
+  }
+
+  &_link {
+    color: #8D8D8D;
+    font-family: "Stem";
+    font-size: 0.875em;
+    font-weight: 500;
+    text-decoration: underline;
+    vertical-align: top;
+    line-height: 1.6;
+    margin-left: 15px;
+  }
+}
+
+//end c-title
+
+//c-tabs
+.c-tabs {
+
+  font-family: "Stem";
+  background-color: #fff;
+  //padding: 21px 26px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  .tabs-menu {
+    font-size: 0;
+    &_item {
+      display: inline-block;
+      //margin-right: 1.875em;
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+    }
+
+    .current {
+      padding: 14px 11px;
+      font-family: "Stem";
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #FBC455;
+      position: relative;
+
+      .tabs-menu_link {
+        color: #FFF;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -8px;
+        border: 8px solid transparent;
+        border-top-color: #FBC455;
+      }
+    }
+
+    &_link {
+      color: #8D8D8D;
+      font-family: "Stem";
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .tab-content {
+    @include clear;
+    display: none;
+
+    &_img {
+      float: left;
+      width: 220px;
+      height: 172px;
+      background-color: #343434;
+      margin-right: 18px;
+    }
+
+    &_text {
+      //float: left;
+    }
+  }
+
+  &_logo {
+    display: inline-block;
+    color: #2B2A29;
+    font-family: "Stem";
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 38px;
+  }
+
+  .tabs-menu {
+    display: inline-block;
+  }
+
+  #tab-1 {
+    display: block; }
+}
+//end c-tabs

@@ -56,3 +56,132 @@ html {
 
 }
 
+//about
+.about {
+  margin-bottom: 48px;
+}
+
+//contact
+.contact {
+  @include clear;
+
+  &_body {
+    background-color: #fff;
+  }
+
+  &_title {
+
+  }
+
+  &_list {
+
+  }
+
+  &_item {
+    position: relative;
+
+  }
+
+  &_text {
+    display: inline-block;
+    margin-left: 30px;
+    color: #2B2A29;
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+}
+//end contact
+
+//icon
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 17px;
+  height: 20px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.icon-place {
+  background-image: url($img-dir + 'icon-place.png') ;
+}
+
+.icon-phone {
+  background-image: url($img-dir + 'icon-phone.png') ;
+}
+
+.icon-mail {
+  background-image: url($img-dir + 'icon-mail.png') ;
+}
+
+//slider
+ .c-card-object {
+   margin-right: 8px;
+ }
+
+ .slider_item {
+   height: 174px;
+   background-color: #1C1E20;
+   overflow: hidden;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+ }
+
+
+/*slick*/
+.slick-slider {
+  padding-left: 43px;
+  padding-right: 43px;
+}
+
+.slick-prev {
+  left: 4px;
+}
+
+.slick-list {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+
+}
+
+.slick-next {
+  right: 4px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 29px;
+  height: 29px;
+  background-color: #c2c5c7;
+  border-radius: 0;
+
+  &::before {
+    font-size: 8px;
+    color: #000;
+  }
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #fbbb00;
+
+  &::before {
+    color: #fff;
+  }
+}
+
+//.slick-prev:focus,
+//.slick-next:focus {
+//  background-color: #c2c5c7;
+//}
+
+.slick-next::before {
+  content: '►';
+}
+.slick-prev::before {
+  content: '◄';
+}

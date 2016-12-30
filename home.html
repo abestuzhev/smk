@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+
+  <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,24 +21,251 @@
 <div class="smk-layout">
   <div class="container">
 
-    <div class="c-card-object">
-    	<div class="c-card-object_picture">
-        <img src="img/rechnoi.jpg" alt="">
-        <div class="c-icon-object">
-          <div class="c-icon-object_window">
-            <i></i>
-            <i></i>
+    <header class="header">
+      <a class="header_logo"><img src="" alt=""></a>
+      <div class="header_body">
+        <ul class="header-menu">
+          <li class="header-menu_item"><a href="#" class="header-menu_link">Главная</a></li>
+          <li class="header-menu_item"><a href="#" class="header-menu_link">Акции</a></li>
+          <li class="header-menu_item"><a href="#" class="header-menu_link">Поиск недвижимости</a></li>
+          <li class="header-menu_item"><a href="#" class="header-menu_link">Наши объекты</a></li>
+          <li class="header-menu_item"><a href="#" class="header-menu_link">О компании</a></li>
+          <li class="header-menu_item"><a href="#" class="header-menu_link">Контакты</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="stock mb-12">
+      <div class="c-title">
+        <h2 class="c-title_h2">Акции</h2>
+        <a class="c-title_link" href="#">все акции</a>
+      </div><!--end c-title-->
+
+      <div class="stock-slider mb-2">
+        <div class="slider_item" style="background-image: url('img/slide-1.jpg')"></div>
+        <div class="slider_item" style="background-image: url('img/slide-2.jpg')"></div>
+      </div><!--end stock-slider-->
+
+      <div class="l-button"><a href="#" class="c-button">Оставить заявку</a></div>
+    </div><!--end stock-->
+
+
+    <div class="realty mb-12">
+      <div class="c-title">
+        <h2 class="c-title_h2">Поиск недвижимости</h2>
+        <a class="c-title_link" href="#">искать</a>
+      </div><!--end c-title-->
+
+      <div class="realty-slider">
+
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+
+      </div><!--end realty-slider-->
+
+    </div><!--end realty-->
+
+
+    <div class="objects mb-12">
+      <div class="c-title">
+        <h2 class="c-title_h2">Наши объекты</h2>
+        <a class="c-title_link" href="#">все объекты</a>
+      </div><!--end c-title-->
+
+      <div class="objects-slider">
+
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+        <div class="c-card-object">
+          <div class="c-card-object_picture">
+            <img src="img/rechnoi.jpg" alt="">
+            <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+          </div>
+          <div class="c-card-object_body">
+            <div class="c-card-object_title">"Речной"</div>
+            <div class="c-card-object_subtitle">IV квартал 2016</div>
+            <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+            <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+            <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+          </div>
+        </div><!-- end c-card_object -->
+
+      </div><!--end objects-slider-->
+    </div><!--end objects-->
+
+    <div class="about mb-12">
+      <div class="c-title">
+        <h2 class="c-title_h2">О компании</h2>
+        <a class="c-title_link" href="#">подробнее</a>
+      </div><!--end c-title-->
+      <div id="tabs-container" class="c-tabs plr-5 ptb-6">
+        <div class="c-tabs_logo">ООО "СМК"</div>
+        <ul class="tabs-menu">
+          <li class="tabs-menu_item current"><a href="#tab-1" class="tabs-menu_link">О компании</a></li>
+          <li class="tabs-menu_item"><a href="#tab-2" class="tabs-menu_link">Сотрудники</a></li>
+          <li class="tabs-menu_item"><a href="#tab-3" class="tabs-menu_link">Объекты</a></li>
+        </ul>
+        <div class="tab">
+          <div id="tab-1" class="tab-content">
+            <div class="tab-content_img"><img src="" alt=""></div>
+            <div class="tab-content_text">
+              Компания «Альтернатива Норд» основана в 2010 году. Наша Компания осуществляет поставки общестроительных материалов на все крупнейшие объекты и предприятия региона. Мы предлагаем Вашему вниманию строительные материалы самых крупных и известных заводов России и стран ближнего зарубежья по их рекомендованным ценам. В ассортиментную матрицу товаров нашей Компании входят следующие продукты и торговые марки: «ROCKWOOL», «ВОЛМА», «ПАНЕЛЬГАРД», «МЕТАЛЛ ПРОФИЛЬ», «KNAUFINSULATION», «ESTIMA»  «АЛЬТ-ФАСАД», «ПРОФИСТ», «ТЕХНОНИКОЛЬ», «КАМЕННЫЙ ЦВЕТОК», «ECOROOM», «PENOSIL», «TECH-KREP», «BERYOZA CERAMICA», «ПЕНОПЛЭКС».
+            </div>
+          </div>
+          <div id="tab-2" class="tab-content">
+            <div class="tab-content_img"><img src="" alt=""></div>
+            <div class="tab-content_text">
+              Компания «Альтернатива Норд» основана в 2010 году. Наша Компания осуществляет поставки общестроительных материалов на все крупнейшие объекты и предприятия региона. Мы предлагаем Вашему вниманию строительные материалы самых крупных и
+            </div>
+          </div>
+          <div id="tab-3" class="tab-content">
+            <div class="tab-content_img"><img src="" alt=""></div>
+            <div class="tab-content_text">
+              Компания «Альтернатива Норд» основана в 2010 году. Наша Компания осуществляет поставки общестроительных материалов на все крупнейшие объекты и предприятия региона. Мы предлагаем Вашему вниманию строительные материалы самых крупных и известных заводов России и стран ближнего зарубежья по их рекомендованным ценам.
+            </div>
           </div>
         </div>
       </div>
-      <div class="c-card-object_body">
-        <div class="c-card-object_title">"Речной"</div>
-        <div class="c-card-object_subtitle">IV квартал 2016</div>
-        <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
-        <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
-        <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+    </div><!--end about-->
+
+    <div class="contact mb-12">
+      <div class="c-title">
+        <h2 class="c-title_h2">Контакты</h2>
+        <a class="c-title_link" href="#">подробнее</a>
+      </div><!--end c-title-->
+      <div class="contact_body l-row plr-5 ptb-6">
+        <div class="contact-body_column col-lg-6">
+          <h3 class="contact_title mb-4">Группа компаний СМК</h3>
+          <ul class="contact_list">
+            <li class="contact_item mb-3"><i class="icon icon-place"></i><div class="contact_text"><b>Адрес:</b> 163000, Россия, г. Архангельск, ул. Попова, 14, Торгово-деловой центр «Аквилон-Инвест», 6 этаж</div></li>
+            <li class="contact_item mb-3"><i class="icon icon-phone"></i><div class="contact_text"><b>Телефон/факс:</b> (8182) 46-42-30, 65-63-65, 65-33-35</div></li>
+            <li class="contact_item mb-3"><i class="icon icon-mail"></i><div class="contact_text"><b>Электронная почта:</b> invest@akvilon-invest.ru</div></li>
+          </ul>
+        </div>
+        <div class="contact-body_column col-lg-6">
+          <h3 class="contact_title mb-4">Центр продаж новостроек</h3>
+          <ul class="contact_list">
+            <li class="contact_item mb-3"><i class="icon icon-place"></i><div class="contact_text"><b>Адрес:</b> 163000, Россия, г. Архангельск, ул. Попова, 14, Торгово-деловой центр «Аквилон-Инвест», 6 этаж</div></li>
+            <li class="contact_item mb-3"><i class="icon icon-phone"></i><div class="contact_text"><b>Телефон/факс:</b> (8182) 46-42-30, 65-63-65, 65-33-35</div></li>
+            <li class="contact_item mb-3"><i class="icon icon-mail"></i><div class="contact_text"><b>Электронная почта:</b> invest@akvilon-invest.ru</div></li>
+          </ul>
+        </div>
       </div>
-    </div><!-- end c-card_object -->
+    </div><!--end contact-->
+
 
   </div><!-- end container -->
 </div><!-- end smk-layout -->
@@ -53,6 +284,8 @@
 
 <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 
 
