@@ -1,0 +1,56 @@
+.header {
+  @include clear;
+
+  &-contact {
+    font-family: "Roboto";
+    text-align: right;
+
+    &_item {
+      //display: inline-block;
+      position: relative;
+      color: #252525;
+      font-size: .75em;
+      font-weight: 400;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 14%;
+        border-bottom: 1px dotted #000;
+        width: 86%;
+      }
+
+      &:hover::after {
+        border: none;
+      }
+    }
+  }
+
+  &-menu {
+    text-align: justify;
+
+    &::after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+    }
+
+    &_item {
+      display: inline-block;
+    }
+
+    &_link {
+      color: #1E1E1E;
+      font-family: "Roboto";
+      font-size: .875em;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      &:hover {
+        color: #FBBB00;
+      }
+    }
+  }
+}

@@ -7,8 +7,8 @@
   <link rel="shortcut icon" href="favicon.png">
   <!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 
   <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
@@ -19,21 +19,41 @@
 <body>
 
 <div class="smk-layout">
+
   <div class="container">
 
-    <header class="header">
-      <a class="header_logo"><img src="" alt=""></a>
-      <div class="header_body">
-        <ul class="header-menu">
-          <li class="header-menu_item"><a href="#" class="header-menu_link">Главная</a></li>
-          <li class="header-menu_item"><a href="#" class="header-menu_link">Акции</a></li>
-          <li class="header-menu_item"><a href="#" class="header-menu_link">Поиск недвижимости</a></li>
-          <li class="header-menu_item"><a href="#" class="header-menu_link">Наши объекты</a></li>
-          <li class="header-menu_item"><a href="#" class="header-menu_link">О компании</a></li>
-          <li class="header-menu_item"><a href="#" class="header-menu_link">Контакты</a></li>
-        </ul>
+    <header class="header mb-3">
+      <a href="/" class="header_logo col-lg-3 col-md-2 col-sm-3 col-xs-3"><img src="img/header-logo.png" alt=""></a>
+      <div class="header-contact mb-1 col-lg-9 col-md-10 col-sm-9 col-xs-9">
+        <a href="#" class="header-contact_item mr-6"><i class="header-icon icon-phone-yellow"></i>Заказать звонок</a>
+        <a href="#" class="header-contact_item"><i class="header-icon icon-mail-yellow"></i>Написать письмо</a>
       </div>
+      <ul class="header-menu mt-4 col-lg-9 col-md-10 col-sm-12 col-xs-12">
+        <li class="header-menu_item"><a href="#" class="header-menu_link">Главная</a></li>
+        <li class="header-menu_item"><a href="#" class="header-menu_link">Акции</a></li>
+        <li class="header-menu_item"><a href="#" class="header-menu_link">Поиск недвижимости</a></li>
+        <li class="header-menu_item"><a href="#" class="header-menu_link">Наши объекты</a></li>
+        <li class="header-menu_item"><a href="#" class="header-menu_link">О компании</a></li>
+        <li class="header-menu_item"><a href="#" class="header-menu_link">Контакты</a></li>
+      </ul>
     </header>
+
+    <div class="home-slider">
+      <div class="slider_item" style="background-image: url('img/home-slide-1.jpg')">
+        <div class="home-slider_info">
+          <img src="img/icon-banner-info.png" alt="" class="home-slider_icon mb-6">
+          <div class="home-slider_title mb-6">"наименование жилого комплекса до 3х строк включительно"</div>
+          <div class="home-slider_text mb-9">
+            <p>Квартиры от 1 млн. руб.</p>
+            <p style="color: red;">50 000 за м<sup>2</sup></p>
+          </div>
+          <div class="l-button"><a href="#" class="c-button mb-1">Оставить заявку</a></div>
+          <a href="#" class="home-slider_link">или узнать подробности</a>
+        </div>
+      </div>
+      <div class="slider_item" style="background-image: url('img/home-slide-2.jpg')"></div>
+    </div>
+
 
     <div class="stock mb-12">
       <div class="c-title">
@@ -41,7 +61,7 @@
         <a class="c-title_link" href="#">все акции</a>
       </div><!--end c-title-->
 
-      <div class="stock-slider mb-2">
+      <div class="stock-slider mb-2 plr-12">
         <div class="slider_item" style="background-image: url('img/slide-1.jpg')"></div>
         <div class="slider_item" style="background-image: url('img/slide-2.jpg')"></div>
       </div><!--end stock-slider-->
@@ -55,9 +75,7 @@
         <h2 class="c-title_h2">Поиск недвижимости</h2>
         <a class="c-title_link" href="#">искать</a>
       </div><!--end c-title-->
-
       <div class="realty-slider">
-
         <div class="c-card-object">
           <div class="c-card-object_picture">
             <img src="img/rechnoi.jpg" alt="">
@@ -268,14 +286,27 @@
 
 
   </div><!-- end container -->
+  <div class="city-layout"></div>
 </div><!-- end smk-layout -->
 <div class="footer">
-	<div class="footer_logo">
-    <img src="img/footer-logo.png" alt="">
-  </div>
+  <div class="footer_logo"> <img src="img/footer-logo.png" alt=""></div>
   <div class="footer-contact">
     <div class="footer-contact_address">г. Северодвинск, ул. Индустриальная, 18.</div>
     <div class="footer-contact_number">+7 (8184) 56-55-28 ; smk@atnet.ru</div>
+  </div>
+
+  <div class="footer-line">
+    <div class="container">
+      <ul class="footer-menu">
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Главная</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Акции</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Поиск недвижимости</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Наши объекты</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">О компании</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Благотворительность</a></li>
+        <li class="footer-menu_item"><a href="#" class="footer-menu_link">Контакты</a></li>
+      </ul>
+    </div>
   </div>
 </div><!-- end footer -->
 

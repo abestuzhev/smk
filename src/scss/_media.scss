@@ -1,0 +1,33 @@
+@media (max-width:680px) {
+  .header-menu {
+    text-align: center;
+  }
+
+  .header-menu_item {
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-contact {
+    margin-top: 1.5em;
+  }
+
+  .header-contact_item {
+    font-size: 1.2em;
+  }
+
+  .home-slider_info {
+    display: none;
+  }
+
+  .footer-menu {
+    text-align: center;
+  }
+
+  .footer-menu_item {
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+}
