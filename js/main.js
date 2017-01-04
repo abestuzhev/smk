@@ -89,4 +89,19 @@ $(document).ready(function() {
         slidesToScroll: 1
     });
 
+    $(".header-menu_mobile").click(function(event) {
+        event.preventDefault();
+        $('.header-menu').toggle();
+    });
+
+    $(".home-slider").click(function(event) {
+        event.preventDefault();
+        $('.header-menu').hide();
+    });
+
+    $.window.click(function(event) {
+        event.preventDefault();
+        $('.header-menu').hide();
+    });
+
 });

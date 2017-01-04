@@ -129,12 +129,6 @@ html {
   background-image: url($img-dir + 'icon-mail.png') ;
 }
 
-.header-icon {
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 4px;
-  vertical-align: top;
-}
 
 .icon-phone-yellow {
   width: 10px;
@@ -183,13 +177,13 @@ html {
       display: inline-block;
     }
   }
-  
+
   &_title {
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
   }
-  
+
   &_text {
     font-size: 18px;
     font-weight: 900;
@@ -199,7 +193,7 @@ html {
     }
 
   }
-  
+
   &_link {
     color: #1E1E1E;
     font-size: 14px;

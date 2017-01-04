@@ -27,6 +27,13 @@
     }
   }
 
+  &-icon {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 4px;
+    // vertical-align: top;
+  }
+
   &-menu {
     text-align: justify;
 
@@ -51,6 +58,15 @@
       &:hover {
         color: #FBBB00;
       }
+    }
+
+    &_mobile {
+      display: none;
+      padding: .3em .5em;
+      background-color: #fbbb00;
+      color: #fff;
+      border-radius: 2px;
+      margin-right: 1em;
     }
   }
 }

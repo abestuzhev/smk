@@ -31,3 +31,32 @@
     margin-bottom: 4px;
   }
 }
+
+@media (max-width:640px) {
+  .header-contact {
+    margin-top: .8em;
+  }
+  .header-contact_item {
+    font-size: .75em;
+  }
+
+  .header-menu_mobile {
+    display: inline-block;
+  }
+
+  .header-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .header-menu_item {
+    display: block;
+    padding: .6em;
+  }
+}

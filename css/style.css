@@ -451,12 +451,6 @@ html {
 .icon-mail {
   background-image: url("../img/icon-mail.png"); }
 
-.header-icon {
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 4px;
-  vertical-align: top; }
-
 .icon-phone-yellow {
   width: 10px;
   height: 10px;
@@ -594,6 +588,11 @@ html {
     .header-contact_item:hover::after {
       border: none; }
 
+.header-icon {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 4px; }
+
 .header-menu {
   text-align: justify; }
   .header-menu::after {
@@ -611,6 +610,13 @@ html {
     text-transform: uppercase; }
     .header-menu_link:hover {
       color: #FBBB00; }
+  .header-menu_mobile {
+    display: none;
+    padding: .3em .5em;
+    background-color: #fbbb00;
+    color: #fff;
+    border-radius: 2px;
+    margin-right: 1em; }
 
 .footer {
   position: relative;
@@ -1501,3 +1507,23 @@ html {
   .footer-menu_item {
     margin-right: 6px;
     margin-bottom: 4px; } }
+
+@media (max-width: 640px) {
+  .header-contact {
+    margin-top: .8em; }
+  .header-contact_item {
+    font-size: .75em; }
+  .header-menu_mobile {
+    display: inline-block; }
+  .header-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; }
+  .header-menu_item {
+    display: block;
+    padding: .6em; } }
