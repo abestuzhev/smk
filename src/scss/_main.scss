@@ -157,8 +157,15 @@ html {
  }
 
 .home-slider {
+  overflow: hidden;
+
+  & > img {
+    height: 100%;
+  }
+
   .slider_item {
-    height: 400px;
+    // height: 400px;
+    overflow: hidden;
   }
 
   &_info {
@@ -209,8 +216,21 @@ html {
   padding-left: 47px;
 }
 
+.stock-slider {
+  min-height: 174px;
+}
+
+.slick-slider, .slick-list {
+
+}
+
+.slick-list, .slick-track {
+  height: 100% !important;
+}
+
 .stock-slider .slider_item {
-  height: 174px;
+  // min-height: 174px;
+  height: 100%;
 }
 
 

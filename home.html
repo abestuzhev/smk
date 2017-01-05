@@ -15,6 +15,26 @@
   <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+
+      $('.home-slider').slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 500,
+          adaptiveHeight: false
+      });
+  });
+  </script>
+
 </head>
 <body>
 
@@ -40,7 +60,8 @@
     </header>
 
     <div class="home-slider">
-      <div class="slider_item" style="background-image: url('img/home-slide-1.jpg')">
+      <div class="slider_item">
+        <img src="img/home-slide-1.jpg" alt="">
         <div class="home-slider_info">
           <img src="img/icon-banner-info.png" alt="" class="home-slider_icon mb-6">
           <div class="home-slider_title mb-6">"наименование жилого комплекса до 3х строк включительно"</div>
@@ -52,7 +73,7 @@
           <a href="#" class="home-slider_link">или узнать подробности</a>
         </div>
       </div>
-      <div class="slider_item" style="background-image: url('img/home-slide-2.jpg')"></div>
+      <div class="slider_item"><img src="img/home-slide-2.jpg" alt=""></div>
     </div>
 
 
@@ -63,8 +84,10 @@
       </div><!--end c-title-->
 
       <div class="stock-slider mb-2 plr-12">
-        <div class="slider_item" style="background-image: url('img/slide-1.jpg')"></div>
-        <div class="slider_item" style="background-image: url('img/slide-2.jpg')"></div>
+        <!-- <div class="slider_item" style="background-image: url('img/slide-1.jpg')"></div>
+        <div class="slider_item" style="background-image: url('img/slide-2.jpg')"></div> -->
+        <img src="img/slide-1.jpg" alt="">
+        <img src="img/slide-2.jpg" alt="">
       </div><!--end stock-slider-->
 
       <div class="l-button"><a href="#" class="c-button">Оставить заявку</a></div>
@@ -315,9 +338,7 @@
 
 
 <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
 <script src="js/main.js"></script>
 
 
