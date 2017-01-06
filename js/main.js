@@ -21,7 +21,29 @@ $(document).ready(function() {
         adaptiveHeight: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        variableWidth: true
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
 
@@ -35,33 +57,28 @@ $(document).ready(function() {
         adaptiveHeight: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        variableWidth: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true
+                    slidesToScroll: 3
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 770,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 560,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -76,14 +93,19 @@ $(document).ready(function() {
     });
 
 
-    $(".header-menu_mobile").click(function(event) {
+    $(".header-menu_mobile--menu").click(function(event) {
         event.preventDefault();
-        $('.header-menu').toggle();
+        $('.header-menu').toggleClass('is-visible');
     });
 
-    $(".home-slider").click(function(event) {
+    $(".menu_mobile-back").click(function(event) {
         event.preventDefault();
-        $('.header-menu').hide();
+        $('.header-menu').removeClass('is-visible');
+        $('.footer-menu').removeClass('is-visible');
     });
 
+    $(".footer-menu_mobile").click(function(event) {
+        event.preventDefault();
+        $('.footer-menu').toggleClass('is-visible');
+    });
 });

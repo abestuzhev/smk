@@ -1,9 +1,14 @@
 .header {
   @include clear;
 
+  &_logo {
+    padding: 0 !important;
+  }
+
   &-contact {
     font-family: "Roboto";
     text-align: right;
+    margin-top: .6em;
 
     &_item {
       //display: inline-block;
@@ -60,13 +65,48 @@
       }
     }
 
+
     &_mobile {
+      position: relative;
+      vertical-align: top;
       display: none;
-      padding: .3em .5em;
+      padding: .5em 1.1em;
       background-color: #fbbb00;
-      color: #fff;
+      color: #000;
+      font-weight: bold;
       border-radius: 2px;
-      margin-right: 1em;
+      min-height: 2.125em;
+      @extend %transition;
+
+      &:hover {
+        @extend %transition;
+        background-color: rgba(255, 228, 0, 1);
+      }
     }
+
+    &_mobile--phone::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      margin-left: -5px;
+      margin-top: -5px;
+      background: url($img-dir + 'icon-phone-white.png') 0 0 no-repeat;
+    }
+
+    &_mobile--mail::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -4px;
+      background: url($img-dir + 'icon-mail-white.png') 0 0 no-repeat;
+    }
+
   }
 }

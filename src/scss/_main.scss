@@ -15,7 +15,7 @@ html {
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 760px;
   }
 }
 @media (min-width: 992px) {
@@ -144,7 +144,9 @@ html {
 
 //slider
  .c-card-object {
-   margin-right: 8px;
+   box-sizing: border-box;
+   margin-right: 4px;
+   margin-left: 4px;
  }
 
  .slider_item {
@@ -215,13 +217,6 @@ html {
   padding-left: 47px;
 }
 
-.stock-slider {
-  min-height: 174px;
-}
-
-.slick-slider, .slick-list {
-
-}
 
 .slick-list, .slick-track {
   height: 100% !important;
@@ -240,10 +235,9 @@ html {
 .slick-prev {
   left: 4px;
 }
-
-.slick-list {
+.home-slider .slick-list,
+.stock-slider .slick-list {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
 }
 
 .slick-next {
@@ -294,4 +288,11 @@ html {
 .slick-dots li.slick-active {
   background-color: #fbbb00;
   border: none;
+}
+
+
+.menu_mobile-back {
+  display: none;
+  text-align: center;
+  margin-top: 2.75em;
 }
