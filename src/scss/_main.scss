@@ -35,7 +35,6 @@ html {
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
-  z-index: 2;
 }
 .row {
   margin-left: -15px;
@@ -49,8 +48,7 @@ html {
 }
 
 .smk-layout {
-  background-color: #ebf5f7;
-  //background-image: url($img-dir + 'city-bg.png');
+  //background-color: #ebf5f7;
   position: relative;
 
 }
@@ -64,7 +62,6 @@ html {
   background-position: 0 100%;
   position: absolute;
   bottom: 0;
-  z-index: 1;
 }
 
 //about
@@ -212,7 +209,8 @@ html {
 
 .stock-slider,
 .realty-slider,
-.objects-slider {
+.objects-slider,
+.workers-slider{
   padding-right: 47px;
   padding-left: 47px;
 }

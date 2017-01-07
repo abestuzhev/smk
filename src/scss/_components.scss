@@ -244,10 +244,28 @@
     vertical-align: top;
     line-height: 1.6;
     margin-left: 15px;
+    white-space: nowrap;
   }
 }
-
 //end c-title
+
+//c-title_block
+.c-title_block {
+  color: #1D1D1D;
+  font-family: "Stem";
+  font-size: 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1.2px;
+}
+//end c-title_block
+
+//c-block
+.l-block {
+  background-color: #fff;
+}
+//end c-block
+
 
 //c-tabs
 .c-tabs {
@@ -334,3 +352,116 @@
     display: block; }
 }
 //end c-tabs
+.c-card-workers {
+  font-family: "Roboto";
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  margin: 0 4px;
+
+  &_picture {
+    position: relative;
+    text-align: center;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &_img {
+    height: 170px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &_title {
+    color: #292929;
+    font-size: .94em;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  &_body {
+    padding: 0 18px 30px;
+  }
+
+  &_position {
+    color: #171717;
+    font-size: .75em;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &_item {
+    position: relative;
+  }
+
+  &_text {
+    color: #616161;
+    font-size: .875em;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+
+  .c-icon-workers {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -26px;
+    width: 52px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50px 50px 0 0;
+
+    &_tie {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -5px;
+      width: 10px;
+      height: 24px;
+      background: url($img-dir + 'icon-tie.png') 0 0 no-repeat;
+    }
+  }
+}
+//c-card-workers
+
+
+//с-breadcrumbs
+.с-breadcrumbs {
+  background-color: #C7D3D6;
+
+  &_item {
+    display: inline-block;
+
+    &::after {
+      content: '►';
+      color: #fff;
+      font-family: "Arial";
+      font-size: .2em;
+      vertical-align: middle;
+      padding-left: .8em;
+    }
+
+    &:last-child a{
+      color: #1F1F1F;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+
+  &_link {
+    font-family: "Roboto";
+    font-size: .875em;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+//end с-breadcrumbs
