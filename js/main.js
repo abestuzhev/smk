@@ -158,6 +158,8 @@ $(document).ready(function() {
         $('.footer-menu').toggleClass('is-visible');
     });
 
-    $('#slider').jqSlide({'defaultSlide': 1});
+    // $('#slider').jqSlide({'defaultSlide': 1});
+
+    $('.c-tabs').basicTabs();
 });
 

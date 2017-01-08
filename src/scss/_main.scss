@@ -73,16 +73,43 @@ html {
 .contact {
   @include clear;
 
+
   &_body {
     background-color: #fff;
   }
 
   &_title {
-
+    color: #2B2A29;
+    font-family: "Stem";
+    font-size: 1.25em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
-  &_list {
+  &-title_h3 {
+    color: #2B2A29;
+    font-size: 1.125em;
+    font-weight: 700;
+  }
 
+  &-list_item {
+    color: #2B2A29;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 6px;
+    margin-left: 12px;
+    padding-left: 20px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 10px;
+      height: 9px;
+      background: url($img-dir + 'icon-check.png') 0 0 no-repeat;
+    }
   }
 
   &_item {
@@ -97,6 +124,10 @@ html {
     font-size: 14px;
     font-family: "Roboto";
     font-weight: 400;
+
+    b {
+      display: inline-block;
+    }
   }
 }
 //end contact
@@ -124,6 +155,10 @@ html {
 
 .icon-mail {
   background-image: url($img-dir + 'icon-mail.png') ;
+}
+
+.icon-time {
+  background-image: url($img-dir + 'icon-time.png') ;
 }
 
 
@@ -293,4 +328,66 @@ html {
   display: none;
   text-align: center;
   margin-top: 2.75em;
+}
+
+.application {
+  background-color: #FFF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  position: relative;
+  @include clear;
+
+  &_item {
+    padding-left: 0 !important;
+
+    &:last-of-type {
+      padding-right: 0 !important;
+    }
+  }
+
+  .l-button {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*workers*/
+.workers {
+  font-size: 0;
+}
+
+
+//floor
+.floor {
+  background-color: #F3F4F7;
+  padding: 30px 8px 11px;
+  position: relative;
+  @extend %transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fbc455;
+    @extend %transition;
+  }
+
+  &_title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform:  translateX(-50%);
+    color: #181818;
+    font-family: "Stem";
+    font-size: .875em;
+    font-weight: 700;
+  }
+
+  &_img {
+    height: 102px;
+    overflow: hidden;
+    img {
+
+      width: 100%;
+    }
+  }
 }

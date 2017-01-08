@@ -8,6 +8,8 @@
   position: relative;
   outline: 2px solid transparent;
   transition: box-shadow .2s ease-out;
+  margin: 0 8px;
+  margin-bottom: 16px;
 
   //hover start
 
@@ -148,7 +150,50 @@
       }
     }
   }
-}//end c-card-object
+}
+.c-card-object--line {
+  .c-card-object {
+    width: 100%;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:hover .c-card-object_picture::before,
+    &:hover .c-card-object_picture::after {
+      opacity: 0;
+    }
+
+    &:hover .c-card-object_link {
+      color: transparent;
+    }
+
+    &:hover .c-card-object_link span::after {
+      border-color: transparent;
+    }
+  }
+
+  .c-card-object_picture {
+    float: left;
+    width: 230px;
+    margin: 0;
+  }
+
+  .c-card-object_body {
+    margin-left: 250px;
+    text-align: left;
+    padding: 0;
+    padding-top:14px;
+    padding-right: 20px;
+  }
+
+  .c-card-object_title,
+  .c-card-object_subtitle {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+}
+//end c-card-object
 
 
 .c-icon-object {
@@ -352,11 +397,17 @@
     display: block; }
 }
 //end c-tabs
+
+
 .c-card-workers {
+  width: 210px;
   font-family: "Roboto";
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
-  margin: 0 4px;
+  margin: 0 8px;
+  margin-bottom: 16px;
+  display: inline-block;
+  font-size: 16px;
 
   &_picture {
     position: relative;
@@ -465,3 +516,100 @@
   }
 }
 //end с-breadcrumbs
+
+//c-card-stock
+.c-card-stock {
+  background-color: #FFF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  @include clear;
+
+  &_img {
+    width: 220px;
+    height: 139px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    background-color: #343434;
+    @include clear;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(1.1);
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_body {
+    float: left;
+    @include clear;
+  }
+
+  &_title {
+    color: #2B2A29;
+    font-family: "Stem";
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &_date {
+    color: #656565;
+    font-family: "Roboto";
+    font-size: .875em;
+    font-weight: 300;
+  }
+
+  &_preview {
+    height: 2.6em;
+    overflow: hidden;
+    p {
+      color: #656565;
+      font-family: "Roboto";
+      font-size: 1.06em;
+      font-weight: 300;
+      margin-bottom: 0.4em;
+    }
+  }
+
+  .c-title_link {
+    margin: 0;
+  }
+
+  &_more {
+    float: left;
+
+    &-title {
+      color: #2B2A29;
+      font-size: 1.125em;
+      font-weight: 700;
+    }
+  }
+}
+//end c-card-stock
+
+//c-btn-back
+.l-btn-back {
+  text-align: left;
+}
+.c-btn-back {
+  display: inline-block;
+  position: relative;
+  padding-left: 36px;
+  color: #4B4B4B;
+  font-size: 0.875em;
+  font-weight: 500;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 27px;
+    height: 27px;
+    background: url($img-dir + 'icon--btn-back.png') 0 0 no-repeat;
+  }
+}
+//end c-btn-back
