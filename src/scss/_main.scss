@@ -174,6 +174,15 @@ html {
   background: url($img-dir + 'icon-mail-yellow.png') 0 0 no-repeat;
 }
 
+.icon-download {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url($img-dir + 'icon-download.png') 0 0 no-repeat;
+}
+
+
+
 //slider
  .c-card-object {
    box-sizing: border-box;
@@ -359,7 +368,18 @@ html {
 
 
 //floor
-.floor {
+.floor-list {
+  text-align: justify;
+
+  &::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.floor-item {
+  display: inline-block;
   background-color: #F3F4F7;
   padding: 30px 8px 11px;
   position: relative;
@@ -371,7 +391,7 @@ html {
     @extend %transition;
   }
 
-  &_title {
+  .floor_title {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -382,8 +402,7 @@ html {
     font-weight: 700;
   }
 
-  &_img {
-    height: 102px;
+  .floor_img {
     overflow: hidden;
     img {
 
@@ -392,15 +411,259 @@ html {
   }
 }
 
-.object-gallery {
+.object-gallery_item {
+  display: inline-block;
+  width: 145px;
   height: 110px;
   position: relative;
   overflow: hidden;
-  padding-left: 2px !important;
-  padding-right: 2px !important;
 
   img {
 
+    width: 100%;
+    height: 100%;
 
   }
+}
+
+/*object-document*/
+.object-document {
+  font-family: "Roboto";
+  font-weight: 400;
+  padding: 1em;
+
+
+  &_list {
+
+  }
+
+  &_item {
+    margin-bottom: 4px;
+
+  }
+
+  &_body {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px;
+
+    &:hover {
+      background-color: #fbbb00;
+    }
+  }
+
+  &_name {
+    color: #1A1A1A;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  &_format {
+    color: #868686;
+    font-size: 12px;
+  }
+}
+
+.search-object {
+  background-color: #fff;
+  position: relative;
+
+  &_item {
+    margin-bottom: 16px;
+  }
+
+  &_title {
+    display: inline-block;
+    color: #2B2A29;
+    font-family: "Stem";
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 14px;
+  }
+
+  &_min,
+  &_max {
+    position: relative;
+    display: inline-block;
+    width: 152px;
+
+    label {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      line-height: 28px;
+    }
+
+  }
+
+  &_min {
+
+    input {
+      padding-left: 50px;
+    }
+  }
+
+  &_max {
+
+    input {
+      padding-left: 56px;
+    }
+  }
+
+  &_point-list {
+    display: inline-block;
+  }
+
+  &_point {
+    display: inline-block;
+    margin: 0 5px;
+    margin-bottom: 6px;
+  }
+
+  .l-button {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .c-title_link {
+    margin: 0;
+  }
+
+  &_row {
+    text-align: justify;
+
+    &::after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  &_city {
+    width: 236px;
+    display: inline-block;
+    position: relative;
+    select {
+
+      padding-left: 82px;
+    }
+
+    &-title {
+      color: #2B2A29;
+      font-family: "Stem";
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      top: 6px;
+      left: 12px;
+      padding-left: 26px;
+      z-index: 999;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 12px;
+        height: 19px;
+        background: url($img-dir + 'icon-place.png') 0 0 no-repeat;
+      }
+    }
+
+    .SumoSelect > .CaptionCont > span {
+      padding-left: 70px;
+    }
+  }
+
+  &_area {
+    width: 351px;
+    display: inline-block;
+    position: relative;
+
+    select {
+
+      padding-left: 82px;
+    }
+
+
+    &-title {
+      color: #2B2A29;
+      font-family: "Stem";
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      padding-left: 26px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 12px;
+        height: 19px;
+        background: url($img-dir + 'icon-place.png') 0 0 no-repeat;
+      }
+    }
+
+    .SumoSelect > .CaptionCont > span {
+      padding-left: 70px;
+    }
+  }
+
+  &_type {
+    width: 294px;
+    display: inline-block;
+    position: relative;
+
+
+    &-title {
+      color: #2B2A29;
+      font-family: "Stem";
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      top: 6px;
+      left: 12px;
+      padding-left: 26px;
+      z-index: 999;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 21px;
+        height: 18px;
+        background: url($img-dir + 'icon-home-select.png') 0 0 no-repeat;
+      }
+    }
+
+    .SumoSelect > .CaptionCont > span {
+      padding-left: 50px;
+    }
+  }
+
+
+}
+
+.SumoSelect {
+  width: 100%;
+}
+.SumoSelect > .CaptionCont {
+  padding: 6px 14px;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  color: #2B2A29;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.SumoSelect .select-all {
+  height: 29px;
 }

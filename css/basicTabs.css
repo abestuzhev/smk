@@ -41,7 +41,8 @@
 .c-tabs__content {
 	display: none;
 	width: 100%;
-	/*float: left;*/
+	white-space: normal;
+	float: left;
 	/*padding: 0 1.5rem 1.5rem 1.5rem;*/
 }
 
@@ -52,8 +53,10 @@
 	}
 
 	.c-tabs__content.is-open {
-		border-bottom: 1px solid #f2f2f2;
+		border-bottom: 6px solid #dadada;
 		padding: 1.5rem .5rem .5rem .5rem;
+		margin-bottom: 10px;
+		background-color: #f9f9f9;
 	}
 
 	/*.c-tabs__item::after {*/
@@ -65,12 +68,17 @@
 
 @media only screen and (min-width: 640px) {
 	.c-tabs__content {
-		float: left;
+		/*float: left;*/
 	}
 }
 
-.c-tabs {
+.c-tabs,
+.c-tabs_more{
 	background: #fff;
 	overflow: hidden;
+}
+
+.c-tabs {
+	/*white-space: nowrap;*/
 }
 

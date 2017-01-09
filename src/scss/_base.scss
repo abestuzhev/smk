@@ -49,9 +49,28 @@ p {
   text-align: left;
   line-height: 17px;
   color: #3F3F3F;
-  font-family: "Exo 2";
   font-size: 14px;
   font-weight: 300;
+}
+
+select {
+  width: 100%;
+  padding: 6px 14px;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  color: #2B2A29;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+option {
+  border: 1px solid #E1E1E1;
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 
@@ -149,3 +168,39 @@ input[type="checkbox"] {
 .visible {
   opacity: 1;
 }
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  display:none;
+}
+input[type="checkbox"] + label {
+  color: #2B2A29;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before{
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  margin: 0 5px 0 0;
+  position: relative;
+  vertical-align: text-bottom;
+}
+
+
+input[type="checkbox"]:checked + label::before {
+  background: url($img-dir + 'icon-check.png') 50% 50% no-repeat;
+  background-color: #fbbb00;
+  //background-position: 50% 50%;
+  //background-repeat: no-repeat;
+  //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCS…AfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC);
+
+}
+
+

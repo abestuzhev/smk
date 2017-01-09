@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СМК</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+    <link href="css/sumoselect.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="smk-layout">
+    <div class="city-layout"></div>
+
+    <div class="container">
+
+        <header class="header mb-3">
+            <a href="/" class="header_logo col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/logo-smk.svg" alt=""></a>
+            <div class="header-contact mb-1 col-lg-10 col-md-10 col-sm-9 col-xs-8">
+                <a href="#" class="header-menu_mobile header-menu_mobile--menu">Меню</a>
+                <a href="#" class="header-menu_mobile header-menu_mobile--phone"></a>
+                <a href="#" class="header-menu_mobile header-menu_mobile--mail"></a>
+                <a href="#" class="header-contact_item mr-6"><i class="header-icon icon-phone-yellow"></i>Заказать звонок</a>
+                <a href="#" class="header-contact_item"><i class="header-icon icon-mail-yellow"></i>Написать письмо</a>
+            </div>
+            <ul class="header-menu mt-4 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                <li class="header-menu_item"><a href="#" class="header-menu_link">Главная</a></li>
+                <li class="header-menu_item"><a href="#" class="header-menu_link">Акции</a></li>
+                <li class="header-menu_item"><a href="#" class="header-menu_link">Поиск недвижимости</a></li>
+                <li class="header-menu_item"><a href="#" class="header-menu_link">Наши объекты</a></li>
+                <li class="header-menu_item"><a href="#" class="header-menu_link">О компании</a></li>
+                <li class="header-menu_item"><a href="#" class="header-menu_link">Контакты</a></li>
+                <a href="#" class="menu_mobile-back"><img src="img/icon-arrow-menu.png" alt=""></a>
+            </ul>
+        </header>
+    </div>
+
+    <ul class="с-breadcrumbs">
+        <div class="container">
+            <li class="с-breadcrumbs_item"><a href="#" class="с-breadcrumbs_link">Главная</a></li>
+            <li class="с-breadcrumbs_item"><a href="#" class="с-breadcrumbs_link">Поиск недвижимости</a></li>
+        </div>
+    </ul><!--end с-breadcrumbs-->
+
+    <div class="container">
+        <div class="c-title"><h2 class="c-title_h2">Поиск недвижимости</h2></div><!--end c-title-->
+
+
+        <form class="search-object ptb-5 plr-6 mb-6 pb-8">
+            <div class="search-object_item">
+                <div class="search-object_row">
+
+                    <div class="search-object_city">
+                        <div class="search-object_city-title">Город</div>
+                        <select class="SlectBox" placeholder="Выберите город">
+                            <option selected="selected">Архангельск</option>
+                            <option>Северодвинск</option>
+                            <option value="mercedes">Новодвинск</option>
+                        </select>
+                    </div>
+                    <div class="search-object_area">
+                        <div class="search-object_city-title">Район</div>
+                        <select multiple="multiple" placeholder="Выберите район" onchange="console.log($(this).children(':selected').length)" class="testSelAll2">
+                            <option value="volvo">Варавино-Фактория</option>
+                            <option value="saab">Исакогорский</option>
+                            <option selected value="audi">Ломоносовский</option>
+                            <option selected value="Маймаксанский">Маймаксанский</option>
+                            <option value="porsche">Октябрьский</option>
+                            <option value="ferrari">Майская Горка</option>
+                            <option value="mitsubishi">Соломбальский</option>
+                            <option value="mitsubishi">Цигломенский</option>
+                        </select>
+                    </div>
+                    <div class="search-object_type">
+                        <div class="search-object_type-title">Тип</div>
+                        <select class="SlectBox" placeholder="Выберите тип">
+                            <option selected="selected">Новостройка</option>
+                            <option>Вторичное жилье</option>
+                        </select>
+                    </div>
+
+                    <!--<div class="search-object_city">-->
+                        <!--<div class="search-object_city-title">Город</div>-->
+                        <!--<select name="search-object_city" id="search-object_city">-->
+                            <!--<option value="">Архангельск</option>-->
+                            <!--<option value="">Северодвинск</option>-->
+                            <!--<option value="">Новодвинск</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+
+                    <!--<div class="search-object_area">-->
+                        <!--<div class="search-object_area-title">Район</div>-->
+                        <!--<select name="search-object_area" id="search-object_area">-->
+                            <!--<option value="">Можно выбрать несколько районов</option>-->
+                            <!--<option value="">Ломоносовский</option>-->
+                            <!--<option value="">Октябрьский</option>-->
+                            <!--<option value="">Майская горка</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+
+                    <!--<div class="search-object_type">-->
+                        <!--<div class="search-object_type-title">Тип</div>-->
+                        <!--<select name="search-object_type" id="search-object_type">-->
+                            <!--<option value="">Новостройка</option>-->
+                            <!--<option value="">Вторичное жилье</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                </div><!--search-object_row-->
+            </div>
+            <div class="search-object_item">
+                <div class="search-object_title">Этаж:</div>
+                <ul class="search-object_point-list">
+                    <li class="search-object_point">
+                        <input id="floor-one" type="checkbox" name="floor-one"/>
+                        <label for="floor-one">1;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-two" type="checkbox" name="floor-two"/>
+                        <label for="floor-two">2;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-three" type="checkbox" name="floor-three"/>
+                        <label for="floor-three">3;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-four" type="checkbox" name="floor-four"/>
+                        <label for="floor-four">4;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-five" type="checkbox" name="floor-five"/>
+                        <label for="floor-five">5;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-six" type="checkbox" name="floor-six"/>
+                        <label for="floor-six">6;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-seven" type="checkbox" name="floor-seven"/>
+                        <label for="floor-seven">7;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-eight" type="checkbox" name="floor-eight"/>
+                        <label for="floor-eight">8;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-nine" type="checkbox" name="floor-nine"/>
+                        <label for="floor-nine">9;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-ten" type="checkbox" name="floor-ten"/>
+                        <label for="floor-ten">10;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-eleven" type="checkbox" name="floor-eleven"/>
+                        <label for="floor-eleven">11;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-twelve" type="checkbox" name="floor-twelve"/>
+                        <label for="floor-twelve">12;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-thirteen" type="checkbox" name="floor-thirteen"/>
+                        <label for="floor-thirteen">13;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="floor-all" type="checkbox" name="floor-all"/>
+                        <label for="floor-all">Все</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-object_item">
+                <div class="search-object_title">Комнаты:</div>
+
+                <ul class="search-object_point-list">
+                    <li class="search-object_point">
+                        <input id="room-studio" type="checkbox" name="room-studio"/>
+                        <label for="room-studio">Студия;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="room-one" type="checkbox" name="room-one"/>
+                        <label for="room-one">1;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="room-two" type="checkbox" name="room-two"/>
+                        <label for="room-two">2;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="room-three" type="checkbox" name="room-three"/>
+                        <label for="room-three">3;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="room-four" type="checkbox" name="room-four"/>
+                        <label for="room-four">4;</label>
+                    </li>
+                    <li class="search-object_point">
+                        <input id="room-five" type="checkbox" name="room-five"/>
+                        <label for="room-five">5;</label>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="search-object_item">
+                <div class="search-object_title">Стоимостоть:</div>
+                <div class="search-object_min">
+                    <label for="min">Мин.</label>
+                    <input type="text" id="min" placeholder="750 000">
+                </div>
+                <div class="search-object_max">
+                    <label for="max">Макс.</label>
+                    <input type="text" id="max" placeholder="5 000 000">
+                </div>
+            </div>
+            <a href="#" class="c-title_link">Сбросить фильтр</a>
+            <div class="l-button"><a href="#" class="c-button">Искать</a></div>
+        </form>
+
+
+    </div><!-- end container -->
+</div><!-- end smk-layout -->
+<div class="footer">
+    <a href="/" class="footer_logo"> <img src="img/footer-logo.png" alt=""></a>
+    <div class="footer-contact mb-11">
+        <div class="footer-contact_address">г. Северодвинск, ул. Индустриальная, 18.</div>
+        <div class="footer-contact_number">+7 (8184) 56-55-28 ; smk@atnet.ru</div>
+    </div>
+
+    <div class="footer-line">
+        <div class="container">
+            <a href="#" class="footer-menu_mobile">Меню</a>
+            <ul class="footer-menu">
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Главная</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Акции</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Поиск недвижимости</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Наши объекты</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">О компании</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Благотворительность</a></li>
+                <li class="footer-menu_item"><a href="#" class="footer-menu_link">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</div><!-- end footer -->
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+<script src="js/jquery.sumoselect.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.asd = $('.SlectBox').SumoSelect({ csvDispCount: 3, captionFormatAllSelected: "Yeah, OK, so everything." });
+        window.test = $('.testsel').SumoSelect({okCancelInMulti:true, captionFormatAllSelected: "Yeah, OK, so everything." });
+        window.testSelAll = $('.testSelAll').SumoSelect({okCancelInMulti:true, selectAll:true });
+        window.testSelAlld = $('.SlectBox-grp').SumoSelect({okCancelInMulti:true, selectAll:true });
+
+        window.testSelAll2 = $('.testSelAll2').SumoSelect({selectAll:true });
+
+
+        window.Search = $('.search-box').SumoSelect({ csvDispCount: 3, search: true, searchText:'Enter here.' });
+        window.searchSelAll = $('.search-box-sel-all').SumoSelect({ csvDispCount: 3, selectAll:true, search: true, searchText:'Enter here.', okCancelInMulti:true });
+        window.searchSelAll = $('.search-box-open-up').SumoSelect({ csvDispCount: 3, selectAll:true, search: false, searchText:'Enter here.', up:true });
+
+        window.groups_eg_g = $('.groups_eg_g').SumoSelect({selectAll:true, search:true });
+    });
+</script>
+
+</body>
+</html>

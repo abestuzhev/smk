@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="bower_components/lightgallery.js/dist/css/lightgallery.css">
   <link rel="stylesheet" href="css/basicTabs.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -86,32 +87,49 @@
       <li class="c-tabs__item">
         <a href="javascript:void(0)" class="c-tabs__link">Фотографии</a>
         <div class="c-tabs__content">
-          <div class="tab-content_text">
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
-            <div class="l-block col-lg_2 col-md_2 col-sm-2 col-xs-2 object-gallery"><img src="img/object-gallery-1.jpg" alt=""></div>
+          <div class="tab-content_text" id="anchor-tag">
+            <a href="img/object-gallery-1.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-1.jpg" alt=""></a>
+            <a href="img/object-gallery-2.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-2.jpg" alt=""></a>
+            <a href="img/object-gallery-3.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-3.jpg" alt=""></a>
+            <a href="img/object-gallery-4.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-4.jpg" alt=""></a>
+            <a href="img/object-gallery-5.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-5.jpg" alt=""></a>
+            <a href="img/object-gallery-6.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-6.jpg" alt=""></a>
+            <a href="img/object-gallery-7.jpg" class="object-gallery_item mb-2"><img src="img/object-gallery-7.jpg" alt=""></a>
           </div>
         </div>
       </li>
       <li class="c-tabs__item">
         <a href="javascript:void(0)" class="c-tabs__link">Объект на карте</a>
         <div class="c-tabs__content">
-          <div class="tab-content_img"><img src="" alt=""></div>
           <div class="tab-content_text">
-            Компания «Альтернатива Норд» основана в 2010 году. Наша Компания осуществляет поставки общестроительных материалов на все крупнейшие объекты и предприятия региона. Мы предлагаем Вашему вниманию строительные материалы самых крупных и известных заводов России и стран ближнего зарубежья по их рекомендованным ценам. В ассортиментную матрицу товаров нашей Компании входят следующие продукты и торговые марки
+            <div class="l-map">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Z-PJ8Bc2Q352KT5EOQfg6OexI8GnSRpi&amp;width=100%25&amp;height=470&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+            </div><!--end l-map-->
           </div>
         </div>
       </li>
       <li class="c-tabs__item">
         <a href="javascript:void(0)" class="c-tabs__link">Проектная декларация</a>
         <div class="c-tabs__content">
-          <div class="tab-content_img"><img src="" alt=""></div>
           <div class="tab-content_text">
-            Компания «Альтернатива Норд» основана в 2010 году. Наша Компания осуществляет поставки общестроительных материалов на все крупнейшие объекты и предприятия региона. Мы предлагаем Вашему вниманию строительные материалы самых крупных и известных заводов России и стран ближнего зарубежья по их рекомендованным ценам. В ассортиментную матрицу товаров нашей Компании входят следующие продукты и торговые марки
+            <div class="object-document">
+              <ol class="object-document_list">
+                <li class="object-document_item">
+                  <div class="object-document_body">
+                    <a href="#" class="object-document_name">Проектная декларация от числа номер</a>
+                    <span class="object-document_format">docx, ( 320 кб. )</span>
+                    <i class="icon-download"></i>
+                  </div>
+                </li>
+                <li class="object-document_item">
+                  <div class="object-document_body">
+                    <a href="#" class="object-document_name">Проектная декларация от 11.05.2012г. №365</a>
+                    <span class="object-document_format">docx, ( 345 кб. )</span>
+                    <i class="icon-download"></i>
+                  </div>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
       </li>
@@ -123,40 +141,33 @@
         <div class="c-tabs__content">
           <div class="tab-content_text">
 
-            <div class="l-block col-lg_2-5 col-md_2-5 col-sm-3 col-xs-3">
-              <div class="floor">
+            <div class="floor-list">
+              <div class="floor-item">
                 <div class="floor_title">1э</div>
                 <div class="floor_img"><img src="img/floor-1.jpg" alt=""></div>
               </div>
-            </div><!--end l-block-->
 
-            <div class="l-block col-lg_2-5 col-md_2-5 col-sm-3 col-xs-3">
-              <div class="floor">
-                <div class="floor_title">1э</div>
+              <div class="floor-item">
+                <div class="floor_title">2э</div>
                 <div class="floor_img"><img src="img/floor-1.jpg" alt=""></div>
               </div>
-            </div><!--end l-block-->
 
-            <div class="l-block col-lg_2-5 col-md_2-5 col-sm-3 col-xs-3">
-              <div class="floor">
-                <div class="floor_title">1э</div>
+              <div class="floor-item">
+                <div class="floor_title">3э</div>
                 <div class="floor_img"><img src="img/floor-1.jpg" alt=""></div>
               </div>
-            </div><!--end l-block-->
 
-            <div class="l-block col-lg_2-5 col-md_2-5 col-sm-3 col-xs-3">
-              <div class="floor">
-                <div class="floor_title">1э</div>
+              <div class="floor-item">
+                <div class="floor_title">4э</div>
                 <div class="floor_img"><img src="img/floor-1.jpg" alt=""></div>
               </div>
-            </div><!--end l-block-->
 
-            <div class="l-block col-lg_2-5 col-md_2-5 col-sm-3 col-xs-3">
-              <div class="floor">
-                <div class="floor_title">1э</div>
+              <div class="floor-item">
+                <div class="floor_title">5э</div>
                 <div class="floor_img"><img src="img/floor-1.jpg" alt=""></div>
               </div>
-            </div><!--end l-block-->
+            </div><!--floor-list-->
+
 
           </div>
         </div>
@@ -192,6 +203,9 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
 <script src="js/basicTabs.js"></script>
+<script src="bower_components/lightgallery.js/dist/js/lightgallery.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
+<script src="js/lg-thumbnail.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>

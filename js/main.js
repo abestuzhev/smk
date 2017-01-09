@@ -161,5 +161,10 @@ $(document).ready(function() {
     // $('#slider').jqSlide({'defaultSlide': 1});
 
     $('.c-tabs').basicTabs();
+    $('.c-tabs').basicTabs({
+        list_class: "c-tabs_more",
+        starting_tab: 2
+    });
 });
 
+lightGallery(document.getElementById('anchor-tag'));
