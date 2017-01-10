@@ -20,7 +20,7 @@ $(document).ready(function() {
         arrows: false,
         infinite: true,
         speed: 500,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         cssEase: 'linear'
     });
 
@@ -156,6 +156,56 @@ $(document).ready(function() {
     $(".footer-menu_mobile").click(function(event) {
         event.preventDefault();
         $('.footer-menu').toggleClass('is-visible');
+    });
+
+    $(".search_btn-filter").click(function(event) {
+        event.preventDefault();
+        $('.search-object').toggleClass('is-visible');
+    });
+
+    $(".search_btn-turn").click(function(event) {
+        event.preventDefault();
+        $('.search-object').toggleClass('is-visible');
+    });
+    /*popup call*/
+    $(".popup_btn-call").click(function(event) {
+        event.preventDefault();
+        $('.popup_call').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+     $(".header-menu_mobile--phone").click(function(event) {
+        event.preventDefault();
+        $('.popup_call').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+    /*********************************/
+    /*popup mail*/
+    $(".popup_btn-mail").click(function(event) {
+        event.preventDefault();
+        $('.popup_mail').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+    $(".header-menu_mobile--mail").click(function(event) {
+        event.preventDefault();
+        $('.popup_mail').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+
+    $(".popup_bg").click(function(event) {
+        event.preventDefault();
+        $('.popup').removeClass('popup-show');
+        $(this).toggleClass('is-visible');
+        $('body').removeClass('body-popup');
+    });
+    $(".popup_back").click(function(event) {
+        event.preventDefault();
+        $('.popup').removeClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').removeClass('body-popup');
     });
 
     // $('#slider').jqSlide({'defaultSlide': 1});

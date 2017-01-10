@@ -54,12 +54,12 @@
     <div class="container">
         <div class="c-title"><h2 class="c-title_h2">Поиск недвижимости</h2></div><!--end c-title-->
 
-
+        <div class="l-search_btn-filter"><a href="" class="search_btn-filter">Фильтр</a></div>
         <form class="search-object ptb-5 plr-6 mb-6 pb-8">
             <div class="search-object_item">
                 <div class="search-object_row">
 
-                    <div class="search-object_city">
+                    <div class="search-object_select search-object_city">
                         <div class="search-object_city-title">Город</div>
                         <select class="SlectBox" placeholder="Выберите город">
                             <option selected="selected">Архангельск</option>
@@ -67,7 +67,7 @@
                             <option value="mercedes">Новодвинск</option>
                         </select>
                     </div>
-                    <div class="search-object_area">
+                    <div class="search-object_select search-object_area">
                         <div class="search-object_city-title">Район</div>
                         <select multiple="multiple" placeholder="Выберите район" onchange="console.log($(this).children(':selected').length)" class="testSelAll2">
                             <option value="volvo">Варавино-Фактория</option>
@@ -80,7 +80,7 @@
                             <option value="mitsubishi">Цигломенский</option>
                         </select>
                     </div>
-                    <div class="search-object_type">
+                    <div class="search-object_select search-object_type">
                         <div class="search-object_type-title">Тип</div>
                         <select class="SlectBox" placeholder="Выберите тип">
                             <option selected="selected">Новостройка</option>
@@ -88,32 +88,6 @@
                         </select>
                     </div>
 
-                    <!--<div class="search-object_city">-->
-                        <!--<div class="search-object_city-title">Город</div>-->
-                        <!--<select name="search-object_city" id="search-object_city">-->
-                            <!--<option value="">Архангельск</option>-->
-                            <!--<option value="">Северодвинск</option>-->
-                            <!--<option value="">Новодвинск</option>-->
-                        <!--</select>-->
-                    <!--</div>-->
-
-                    <!--<div class="search-object_area">-->
-                        <!--<div class="search-object_area-title">Район</div>-->
-                        <!--<select name="search-object_area" id="search-object_area">-->
-                            <!--<option value="">Можно выбрать несколько районов</option>-->
-                            <!--<option value="">Ломоносовский</option>-->
-                            <!--<option value="">Октябрьский</option>-->
-                            <!--<option value="">Майская горка</option>-->
-                        <!--</select>-->
-                    <!--</div>-->
-
-                    <!--<div class="search-object_type">-->
-                        <!--<div class="search-object_type-title">Тип</div>-->
-                        <!--<select name="search-object_type" id="search-object_type">-->
-                            <!--<option value="">Новостройка</option>-->
-                            <!--<option value="">Вторичное жилье</option>-->
-                        <!--</select>-->
-                    <!--</div>-->
                 </div><!--search-object_row-->
             </div>
             <div class="search-object_item">
@@ -210,19 +184,101 @@
             </div>
             <div class="search-object_item">
                 <div class="search-object_title">Стоимостоть:</div>
-                <div class="search-object_min">
-                    <label for="min">Мин.</label>
-                    <input type="text" id="min" placeholder="750 000">
-                </div>
-                <div class="search-object_max">
-                    <label for="max">Макс.</label>
-                    <input type="text" id="max" placeholder="5 000 000">
+                <div class="search-object_value">
+                    <div class="search-object_min">
+                        <label for="min">Мин.</label>
+                        <input type="text" id="min" placeholder="750 000">
+                    </div>
+                    <div class="search-object_max">
+                        <label for="max">Макс.</label>
+                        <input type="text" id="max" placeholder="5 000 000">
+                    </div>
                 </div>
             </div>
             <a href="#" class="c-title_link">Сбросить фильтр</a>
-            <div class="l-button"><a href="#" class="c-button">Искать</a></div>
+            <div class="l-button"><button class="c-button">Искать</button></div>
+
+            <div class="l-search_btn-filter"><a href="" class="search_btn-turn">Свернуть</a></div>
         </form>
 
+        <div class="search-result">
+            <span class="search-result_title">Результат поиска по запросу: </span>
+            <span>Архангельск, р-н Урицкого, р-н Левый берег, г. 2016, г. 2015, этажи: 2,5,6,8, комнаты: студия, 2</span>
+        </div>
+
+        <div class="object-page">
+
+            <div class="c-card-object">
+                <div class="c-card-object_picture">
+                    <img src="img/rechnoi.jpg" alt="">
+                    <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+                </div>
+                <div class="c-card-object_body">
+                    <div class="c-card-object_title">"Речной"</div>
+                    <div class="c-card-object_subtitle">IV квартал 2016</div>
+                    <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+                    <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+                    <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+                </div>
+            </div><!-- end c-card_object -->
+
+            <div class="c-card-object">
+                <div class="c-card-object_picture">
+                    <img src="img/rechnoi.jpg" alt="">
+                    <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+                </div>
+                <div class="c-card-object_body">
+                    <div class="c-card-object_title">"Речной"</div>
+                    <div class="c-card-object_subtitle">IV квартал 2016</div>
+                    <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+                    <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+                    <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+                </div>
+            </div><!-- end c-card_object -->
+
+            <div class="c-card-object">
+                <div class="c-card-object_picture">
+                    <img src="img/rechnoi.jpg" alt="">
+                    <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+                </div>
+                <div class="c-card-object_body">
+                    <div class="c-card-object_title">"Речной"</div>
+                    <div class="c-card-object_subtitle">IV квартал 2016</div>
+                    <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+                    <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+                    <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+                </div>
+            </div><!-- end c-card_object -->
+
+            <div class="c-card-object">
+                <div class="c-card-object_picture">
+                    <img src="img/rechnoi.jpg" alt="">
+                    <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+                </div>
+                <div class="c-card-object_body">
+                    <div class="c-card-object_title">"Речной"</div>
+                    <div class="c-card-object_subtitle">IV квартал 2016</div>
+                    <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+                    <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+                    <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+                </div>
+            </div><!-- end c-card_object -->
+
+            <div class="c-card-object">
+                <div class="c-card-object_picture">
+                    <img src="img/rechnoi.jpg" alt="">
+                    <div class="c-icon-object"><div class="c-icon-object_window"><i></i><i></i></div></div>
+                </div>
+                <div class="c-card-object_body">
+                    <div class="c-card-object_title">"Речной"</div>
+                    <div class="c-card-object_subtitle">IV квартал 2016</div>
+                    <div class="c-card-object_text">г.Архангельск, ул. Попова, д.159</div>
+                    <div class="c-card-object_price"><span>₽ </span>от 42 500 м<sup>2</sup></div>
+                    <a href="#" class="c-card-object_link"><span>посмотреть</span></a>
+                </div>
+            </div><!-- end c-card_object -->
+
+        </div><!--end object-page-->
 
     </div><!-- end container -->
 </div><!-- end smk-layout -->

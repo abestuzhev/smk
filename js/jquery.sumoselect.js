@@ -296,12 +296,12 @@
                         }
                     });
 
-                    if (O.is_floating) {
-                        H = O.optDiv.children('ul').outerHeight() + 2;  // +2 is clear fix
-                        if (O.is_multi) H = H + parseInt(O.optDiv.css('padding-bottom'));
-                        O.optDiv.css('height', H);
-                        $('body').addClass('sumoStopScroll');
-                    }
+                    // if (O.is_floating) {
+                    //     H = O.optDiv.children('ul').outerHeight() + 2;  // +2 is clear fix
+                    //     if (O.is_multi) H = H + parseInt(O.optDiv.css('padding-bottom'));
+                    //     O.optDiv.css('height', H);
+                    //     $('body').addClass('sumoStopScroll');
+                    // }
 
                     O.setPstate();
                 },
@@ -521,7 +521,7 @@
                     O.is_floating = $(window).width() <= settings.floatWidth;
 
                     //set class isFloating
-                    O.optDiv.toggleClass('isFloating', O.is_floating);
+                    // O.optDiv.toggleClass('isFloating', O.is_floating);
 
                     //remove height if not floating
                     if (!O.is_floating) O.optDiv.css('height', '');

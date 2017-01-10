@@ -257,6 +257,9 @@
   background-color: #FBBB00;
   border-radius: 2px;
   @extend %transition;
+  outline: none;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     @extend %transition;
