@@ -59,7 +59,7 @@
         <img src="img/slide-2.jpg" alt="">
       </div><!--end stock-slider-->
 
-      <div class="l-button"><a href="#" class="c-button">Оставить заявку</a></div>
+      <div class="l-button popup_btn-request"><a href="#" class="c-button">Оставить заявку</a></div>
     </div><!--end stock-->
 
     <div class="c-card-stock ptb-4 plr-5 mb-4">
@@ -126,8 +126,60 @@
   </div>
 </div><!-- end footer -->
 
+<div class="popup popup_call">
+  <div class="popup_title mb-6">Заказать звонок</div>
+  <form action="#" class="popup-form">
+    <div class="popup-form_item"><input type="text" placeholder="ФИО"></div>
+    <div class="popup-form_item"><input type="text" placeholder="Тел: +7(___)___-__-__" class="phone-mask"></div>
+    <div class="popup-form_item">
+      <textarea name="" id="popup_call-text" rows="10" placeholder="Здесь вы можете указать желаемое время звонка или задать вопрос."></textarea>
+    </div>
+    <div class="l-button">
+      <a href="#" class="popup_back"><img src="img/icon-arrow-menu.png" alt=""></a>
+      <button class="c-button mb-1">Отправить</button>
+    </div>
+  </form>
+</div>
+<div class="popup popup_mail">
+  <div class="popup_title mb-6">Написать письмо</div>
+  <form action="#" class="popup-form">
+    <div class="popup-form_item"><input type="text" placeholder="ФИО"></div>
+    <div class="popup-form_item"><input type="text" placeholder="Тел: +7(___)___-__-__" class="phone-mask"></div>
+    <div class="popup-form_item"><input type="text" placeholder="Email:"></div>
+    <div class="popup-form_item">
+      <textarea name="" id="popup_mail-text" rows="10" placeholder="Здесь вы можете указать желаемое время звонка или задать вопрос."></textarea>
+    </div>
+    <div class="l-button">
+      <a href="#" class="popup_back"><img src="img/icon-arrow-menu.png" alt=""></a>
+      <button class="c-button mb-1">Отправить</button>
+    </div>
+  </form>
+</div>
+<div class="popup popup_request">
+  <div class="popup_title mb-6">Написать заявку</div>
+  <form action="#" class="popup-form">
+    <div class="popup-form_item"><input type="text" placeholder="ФИО"></div>
+    <div class="popup-form_item"><input type="text" placeholder="Тел: +7(___)___-__-__" class="phone-mask"></div>
+    <div class="popup-form_item"><input type="text" placeholder="Email:"></div>
+    <div class="popup-form_item">
+      <textarea name="" id="popup_request-text" rows="10" placeholder="Здесь вы можете указать желаемое время звонка или задать вопрос."></textarea>
+    </div>
+    <div class="l-button">
+      <a href="#" class="popup_back"><img src="img/icon-arrow-menu.png" alt=""></a>
+      <button class="c-button mb-1">Отправить</button>
+    </div>
+  </form>
+</div>
+<div class="popup_bg"></div>
+
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+<script src="js/basicTabs.js"></script>
+<script src="bower_components/lightgallery.js/dist/js/lightgallery.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="bower_components/jquery-mask-plugin/dist/jquery.mask.js"></script>
+<script src="js/jquery.sumoselect.js"></script>
 <script src="js/main.js"></script>
 
 </body>

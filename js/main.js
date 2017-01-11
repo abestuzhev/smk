@@ -167,6 +167,15 @@ $(document).ready(function() {
         event.preventDefault();
         $('.search-object').toggleClass('is-visible');
     });
+
+    /*popup заявка*/
+    $(".popup_btn-request").click(function(event) {
+        event.preventDefault();
+        $('.popup_request').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+
     /*popup call*/
     $(".popup_btn-call").click(function(event) {
         event.preventDefault();
@@ -215,6 +224,9 @@ $(document).ready(function() {
         list_class: "c-tabs_more",
         starting_tab: 2
     });
+
+    $('.phone-mask').mask('+7(000)000-00-00');
+    $('.mail-mask').mask('+7(000)000-00-00');
 });
 
 lightGallery(document.getElementById('anchor-tag'));
