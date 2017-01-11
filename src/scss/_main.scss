@@ -725,7 +725,7 @@ html {
 }
 
 .popup {
-  position: fixed;
+  position: absolute;
   z-index: 9999;
   top: 25%;
   left: 50%;
@@ -736,8 +736,9 @@ html {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   display: none;
 
+
   &_bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #000;
@@ -749,6 +750,7 @@ html {
 
   &_back {
     display: none;
+    vertical-align: middle;
   }
 
   &_title {
