@@ -2284,7 +2284,7 @@ html {
     margin-right: 0; }
   .header-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #fff;
     margin: 0;
     top: 0;
