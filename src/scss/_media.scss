@@ -93,6 +93,7 @@
 }
 
 @media (max-width:680px) {
+
   .header-menu {
     text-align: center;
   }
@@ -115,6 +116,26 @@
 }
 
 @media (max-width:640px) {
+  .header {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ebf5f7;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+    padding: 0 10px;
+    padding-bottom: 5px;
+    //
+    //& + div {
+    //  padding-top: 90px;
+    //}
+  }
+
+  .smk-layout {
+    padding-top: 13%;
+  }
+
   .header-contact {
     margin-top: 1.6em;
     padding-right: 0 !important;
@@ -344,5 +365,9 @@
 
   .object-gallery_item {
     width: 100%;
+  }
+
+  .smk-layout {
+    padding-top: 11%;
   }
 }

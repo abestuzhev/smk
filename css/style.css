@@ -2272,6 +2272,18 @@ html {
     margin-bottom: 8px; } }
 
 @media (max-width: 640px) {
+  .header {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ebf5f7;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+    padding: 0 10px;
+    padding-bottom: 5px; }
+  .smk-layout {
+    padding-top: 13%; }
   .header-contact {
     margin-top: 1.6em;
     padding-right: 0 !important; }
@@ -2414,4 +2426,6 @@ html {
   .header-contact {
     margin-top: .5em; }
   .object-gallery_item {
-    width: 100%; } }
+    width: 100%; }
+  .smk-layout {
+    padding-top: 11%; } }
