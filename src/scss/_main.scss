@@ -727,9 +727,10 @@ html {
 .popup {
   position: absolute;
   z-index: 9999;
-  top: 25%;
+  top: 50%;
   left: 50%;
   margin-left: -190px;
+  margin-top: -200px;
   width: 380px;
   padding: 28px 26px 18px;
   background-color: #FFF;
