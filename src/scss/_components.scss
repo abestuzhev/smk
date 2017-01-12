@@ -623,3 +623,70 @@
   height: 470px;
 }
 //end l-map
+
+//back to top
+.cd-top {
+  display: inline-block;
+
+  position: fixed;
+  bottom: 85px;
+  right: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+
+
+  /* image replacement properties */
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+
+  &_icon {
+    //padding: 10px;
+  }
+  //
+  //&_text {
+  //  display: inline-block;
+  //  text-align: left;
+  //  color: #1F1F1F;
+  //  font-family: 'Roboto', sans-serif;
+  //  font-size: 18px;
+  //  line-height: 2;
+  //  font-weight: 700;
+  //  text-transform: uppercase;
+  //  position: relative;
+  //  padding-left: 19px;
+  //
+  //  &::after {
+  //    content: '';
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    width: 23px;
+  //    height: 28px;
+  //    background: url($img-dir + 'icon-arrow-menu--up.png') 0 0 no-repeat;
+  //  }
+  //}
+
+  &.cd-is-visible, &.cd-fade-out, .no-touch &:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  &.cd-is-visible { /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  &.cd-fade-out { /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+  }
+  .no-touch &:hover {
+    background-color: rgba(255,255,255, 1);
+    opacity: 1;
+  }
+}
