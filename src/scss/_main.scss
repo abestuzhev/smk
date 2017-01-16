@@ -32,8 +32,6 @@ html {
   padding: 10px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   position: relative;
 }
 .row {
@@ -48,7 +46,6 @@ html {
 }
 
 .smk-layout {
-  //background-color: #ebf5f7;
   min-height: 100%;
   position: relative;
   padding-bottom: 317px;
@@ -208,7 +205,6 @@ html {
   }
 
   .slider_item {
-    // height: 400px;
     overflow: hidden;
   }
 
@@ -261,13 +257,7 @@ html {
   padding-left: 47px;
 }
 
-//
-//.slick-list, .slick-track {
-//  height: 100% !important;
-//}
-
 .stock-slider .slider_item {
-  // min-height: 174px;
   height: 100%;
 }
 
@@ -406,8 +396,8 @@ html {
 
   .floor_img {
     overflow: hidden;
-    img {
 
+    img {
       width: 100%;
     }
   }
@@ -434,14 +424,8 @@ html {
   font-weight: 400;
   padding: 1em;
 
-
-  &_list {
-
-  }
-
   &_item {
     margin-bottom: 4px;
-
   }
 
   &_body {
@@ -552,8 +536,8 @@ html {
     width: 236px;
     display: inline-block;
     position: relative;
-    select {
 
+    select {
       padding-left: 82px;
     }
 
@@ -590,7 +574,6 @@ html {
     position: relative;
 
     select {
-
       padding-left: 82px;
     }
 
@@ -690,6 +673,7 @@ html {
   background-color: #fff;
   padding: 14px 0;
 }
+
 .search_btn-filter {
   color: #5E5E5E;
   font-family: "Stem";
@@ -727,7 +711,7 @@ html {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 50%;
   left: 50%;
@@ -773,6 +757,17 @@ html {
   }
 }
 
+.popup-sent {
+  display: none;
+  font-family: "Roboto";
+  text-align: center;
+
+  &_title {
+    color: #6C6C6C;
+    font-size: 28px;
+    font-weight: 100;
+  }
+}
 
 @keyframes bounce {
   0% {
