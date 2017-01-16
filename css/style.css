@@ -31,6 +31,7 @@ html {
   font-family: "Roboto"; }
 
 body {
+  height: 100%;
   background-color: #ebf5f7;
   padding: 0;
   margin: 0; }
@@ -692,7 +693,9 @@ html {
   letter-spacing: -1px; }
 
 .smk-layout {
-  position: relative; }
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 317px; }
 
 .city-layout {
   width: 100%;
@@ -701,7 +704,7 @@ html {
   background-size: cover;
   background-position: 0 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 317px; }
 
 .about {
   margin-bottom: 48px; }
@@ -1263,6 +1266,19 @@ html {
   overflow: hidden;
   padding-right: 17px; }
 
+.page-not-found {
+  color: #1D1D1D;
+  font-family: "Stem";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 82px; }
+  .page-not-found_title {
+    font-size: 1.375em;
+    margin-bottom: .875em; }
+  .page-not-found_number {
+    font-size: 14.6em; }
+
 .header::after {
   content: '';
   display: block;
@@ -1347,6 +1363,7 @@ html {
 
 .footer {
   position: relative;
+  margin-top: -317px;
   width: 100%;
   background: url("../img/footer-bg.jpg") 0 0 no-repeat;
   background-size: cover;
@@ -2266,7 +2283,11 @@ html {
   .search-object_select {
     width: 32%; }
   .search-object_title {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+  .smk-layout {
+    padding-bottom: 352px; }
+  .footer {
+    margin-top: -352px; } }
 
 @media (max-width: 760px) {
   .workers-page .c-card-workers,
@@ -2342,6 +2363,8 @@ html {
       border: none; }
   .menu_mobile-back {
     display: block; }
+  .footer {
+    margin-top: -340px; }
   .footer-menu {
     width: 100%;
     position: absolute;
@@ -2392,7 +2415,9 @@ html {
     display: block; }
   .search-object_min,
   .search-object_max {
-    width: 49%; } }
+    width: 49%; }
+  .page-not-found_number {
+    font-size: 12.6em; } }
 
 @media (max-width: 760px) {
   .popup {
@@ -2447,7 +2472,11 @@ html {
   .object-gallery_item {
     width: 48%; }
   .с-breadcrumbs {
-    padding-left: 10px; } }
+    padding-left: 10px; }
+  .page-not-found_number {
+    font-size: 9.6em; }
+  .page-not-found_title {
+    font-size: 1.2em; } }
 
 @media (max-width: 360px) {
   .header-contact {

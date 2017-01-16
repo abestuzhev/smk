@@ -66,6 +66,12 @@
   .search-object_title {
     margin-bottom: 8px;
   }
+  .smk-layout {
+    padding-bottom: 352px;
+  }
+  .footer {
+    margin-top: -352px;
+  }
 }
 
 
@@ -183,6 +189,10 @@
     display: block;
   }
 
+  .footer {
+    margin-top: -340px;
+  }
+
   .footer-menu {
     width: 100%;
     position: absolute;
@@ -262,6 +272,10 @@
   .search-object_min,
   .search-object_max {
     width: 49%;
+  }
+
+  .page-not-found_number {
+    font-size: 12.6em;
   }
 }
 
@@ -355,6 +369,13 @@
 
   .с-breadcrumbs {
     padding-left: 10px;
+  }
+
+  .page-not-found_number {
+    font-size: 9.6em;
+  }
+  .page-not-found_title {
+    font-size: 1.2em;
   }
 }
 
