@@ -31,6 +31,7 @@ html {
   font-family: "Roboto"; }
 
 body {
+  height: 100%;
   background-color: #ebf5f7;
   padding: 0;
   margin: 0; }
@@ -625,6 +626,33 @@ input[type="checkbox"]:checked + label::before {
   width: 100%;
   height: 470px; }
 
+.cd-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 85px;
+  right: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  /* image replacement properties */
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s 0s, visibility 0s .3s; }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    transition: opacity .3s 0s, visibility 0s 0s; }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1; }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5; }
+  .no-touch .cd-top:hover {
+    background-color: white;
+    opacity: 1; }
+
 html {
   height: 100%;
   margin: 0;
@@ -651,8 +679,6 @@ html {
   padding: 10px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   position: relative; }
 
 .row {
@@ -665,7 +691,9 @@ html {
   letter-spacing: -1px; }
 
 .smk-layout {
-  position: relative; }
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 317px; }
 
 .city-layout {
   width: 100%;
@@ -674,7 +702,7 @@ html {
   background-size: cover;
   background-position: 0 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 317px; }
 
 .about {
   margin-bottom: 48px; }
@@ -1157,11 +1185,12 @@ html {
     color: #5E5E5E; }
 
 .popup {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
-  top: 25%;
+  top: 50%;
   left: 50%;
   margin-left: -190px;
+  margin-top: -200px;
   width: 380px;
   padding: 28px 26px 18px;
   background-color: #FFF;
@@ -1188,6 +1217,15 @@ html {
     text-transform: uppercase; }
   .popup-form_item {
     margin-bottom: 14px; }
+
+.popup-sent {
+  display: none;
+  font-family: "Roboto";
+  text-align: center; }
+  .popup-sent_title {
+    color: #6C6C6C;
+    font-size: 28px;
+    font-weight: 100; }
 
 @-webkit-keyframes bounce {
   0% {
@@ -1234,6 +1272,19 @@ html {
 .body-popup {
   overflow: hidden;
   padding-right: 17px; }
+
+.page-not-found {
+  color: #1D1D1D;
+  font-family: "Stem";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 82px; }
+  .page-not-found_title {
+    font-size: 1.375em;
+    margin-bottom: .875em; }
+  .page-not-found_number {
+    font-size: 14.6em; }
 
 .header::after {
   content: '';
@@ -1319,6 +1370,7 @@ html {
 
 .footer {
   position: relative;
+  margin-top: -317px;
   width: 100%;
   background: url("../img/footer-bg.jpg") 0 0 no-repeat;
   background-size: cover;
@@ -2238,7 +2290,11 @@ html {
   .search-object_select {
     width: 32%; }
   .search-object_title {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+  .smk-layout {
+    padding-bottom: 352px; }
+  .footer {
+    margin-top: -352px; } }
 
 @media (max-width: 760px) {
   .workers-page .c-card-workers,
@@ -2271,6 +2327,18 @@ html {
     margin-bottom: 8px; } }
 
 @media (max-width: 640px) {
+  .header {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ebf5f7;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+    padding: 0 10px;
+    padding-bottom: 5px; }
+  .smk-layout {
+    padding-top: 13%; }
   .header-contact {
     margin-top: 1.6em;
     padding-right: 0 !important; }
@@ -2283,13 +2351,13 @@ html {
     margin-right: 0; }
   .header-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #fff;
     margin: 0;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     padding-top: 20px;
     padding-left: 10px;
@@ -2302,6 +2370,8 @@ html {
       border: none; }
   .menu_mobile-back {
     display: block; }
+  .footer {
+    margin-top: -340px; }
   .footer-menu {
     width: 100%;
     position: absolute;
@@ -2352,17 +2422,19 @@ html {
     display: block; }
   .search-object_min,
   .search-object_max {
-    width: 49%; } }
+    width: 49%; }
+  .page-not-found_number {
+    font-size: 12.6em; } }
 
 @media (max-width: 760px) {
   .popup {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: scroll; }
+    overflow-y: scroll; }
   .popup .l-button {
     text-align: justify; }
     .popup .l-button::after {
@@ -2407,10 +2479,16 @@ html {
   .object-gallery_item {
     width: 48%; }
   .с-breadcrumbs {
-    padding-left: 10px; } }
+    padding-left: 10px; }
+  .page-not-found_number {
+    font-size: 9.6em; }
+  .page-not-found_title {
+    font-size: 1.2em; } }
 
 @media (max-width: 360px) {
   .header-contact {
     margin-top: .5em; }
   .object-gallery_item {
-    width: 100%; } }
+    width: 100%; }
+  .smk-layout {
+    padding-top: 11%; } }

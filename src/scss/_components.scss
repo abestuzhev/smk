@@ -29,7 +29,7 @@
     @extend %transition;
   }
 
-  &:hover .c-icon-object_window i{
+  &:hover .c-icon-object_window i {
     background-color: #fff;
     @extend %transition;
   }
@@ -79,7 +79,7 @@
       left: 50%;
       margin-left: -8px;
       border: 8px solid transparent;
-      border-top-color:#fbc455;
+      border-top-color: #fbc455;
       opacity: 0;
       @extend %transition;
     }
@@ -151,6 +151,7 @@
     }
   }
 }
+
 .c-card-object--line {
   .c-card-object {
     width: 100%;
@@ -183,7 +184,7 @@
     margin-left: 250px;
     text-align: left;
     padding: 0;
-    padding-top:14px;
+    padding-top: 14px;
     padding-right: 20px;
   }
 
@@ -195,16 +196,14 @@
 }
 //end c-card-object
 
-
 .c-icon-object {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left:-16px;
+  margin-left: -16px;
   width: 32px;
   height: 26px;
   background: url($img-dir + 'icon-home.png') 0 0 no-repeat;
-
 
   &_window {
     width: 9px;
@@ -237,15 +236,14 @@
       @extend %transition;
     }
   }
-
-}//c-icon-object
-
-
+}
+//c-icon-object
 
 //c-button
 .l-button {
   text-align: center;
 }
+
 .c-button {
   display: inline-block;
   color: #1E1E1E;
@@ -314,22 +312,19 @@
 }
 //end c-block
 
-
 //c-tabs
 .c-tabs {
-
   font-family: "Stem";
   background-color: #fff;
-  //padding: 21px 26px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+
   .tabs-menu {
     font-size: 0;
+
     &_item {
       display: inline-block;
-      //margin-right: 1.875em;
       margin-right: 30px;
       margin-bottom: 30px;
-
     }
 
     .current {
@@ -376,10 +371,6 @@
       background-color: #343434;
       margin-right: 18px;
     }
-
-    &_text {
-      //float: left;
-    }
   }
 
   &_logo {
@@ -397,10 +388,10 @@
   }
 
   #tab-1 {
-    display: block; }
+    display: block;
+  }
 }
 //end c-tabs
-
 
 .c-card-workers {
   width: 210px;
@@ -415,7 +406,6 @@
   &_picture {
     position: relative;
     text-align: center;
-    position: relative;
     margin-bottom: 24px;
   }
 
@@ -485,7 +475,6 @@
 }
 //c-card-workers
 
-
 //с-breadcrumbs
 .с-breadcrumbs {
   background-color: #C7D3D6;
@@ -502,7 +491,7 @@
       padding-left: .8em;
     }
 
-    &:last-child a{
+    &:last-child a {
       color: #1F1F1F;
     }
 
@@ -539,7 +528,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%) scale(1.1);
+      transform: translate(-50%, -50%) scale(1.1);
       width: 100%;
       height: auto;
     }
@@ -568,6 +557,7 @@
   &_preview {
     height: 2.6em;
     overflow: hidden;
+
     p {
       color: #656565;
       font-family: "Roboto";
@@ -597,6 +587,7 @@
 .l-btn-back {
   text-align: left;
 }
+
 .c-btn-back {
   display: inline-block;
   position: relative;
@@ -623,3 +614,44 @@
   height: 470px;
 }
 //end l-map
+
+//back to top
+.cd-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 85px;
+  right: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  /* image replacement properties */
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+
+  &.cd-is-visible, &.cd-fade-out, .no-touch &:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+
+  &.cd-is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.cd-fade-out {
+    opacity: .5;
+  }
+
+  .no-touch &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+}

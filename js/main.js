@@ -1,18 +1,6 @@
 $(document).ready(function() {
 
-    /*tabs*/
-    $(".tabs-menu a").click(function(event) {
-        event.preventDefault();
-        $(this).parent().addClass("current");
-        $(this).parent().siblings().removeClass("current");
-        var tab = $(this).attr("href");
-        $(".tab-content").not(tab).css("display", "none");
-        $(tab).fadeIn();
-    });
-
     /*slider*/
-
-
     $('.home-slider').slick({
         autoplay: true,
         autoplaySpeed: 5000,
@@ -94,8 +82,7 @@ $(document).ready(function() {
             }
         ]
     });
-
-
+    
     $('.workers-slider').slick({
         autoplay: false,
         autoplaySpeed: 5000,
@@ -140,7 +127,6 @@ $(document).ready(function() {
         speed: 500,
         adaptiveHeight: true
     });
-
 
     $(".header-menu_mobile--menu").click(function(event) {
         event.preventDefault();
@@ -189,6 +175,16 @@ $(document).ready(function() {
         $('.popup_bg').toggleClass('is-visible');
         $('body').toggleClass('body-popup');
     });
+
+    /*********************************/
+    /*Ваша заявка отправлена*/
+    $(".popup-sent_close").click(function(event) {
+        event.preventDefault();
+        $('.popup-sent').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+
     /*********************************/
     /*popup mail*/
     $(".popup_btn-mail").click(function(event) {
@@ -210,14 +206,13 @@ $(document).ready(function() {
         $(this).toggleClass('is-visible');
         $('body').removeClass('body-popup');
     });
+
     $(".popup_back").click(function(event) {
         event.preventDefault();
         $('.popup').removeClass('popup-show');
         $('.popup_bg').toggleClass('is-visible');
         $('body').removeClass('body-popup');
     });
-
-    // $('#slider').jqSlide({'defaultSlide': 1});
 
     $('.c-tabs').basicTabs();
     $('.c-tabs').basicTabs({
@@ -227,6 +222,27 @@ $(document).ready(function() {
 
     $('.phone-mask').mask('+7(000)000-00-00');
     $('.mail-mask').mask('+7(000)000-00-00');
+
+    //кнопка вверх
+    var offset = 300,
+        offset_opacity = 1200,
+        scroll_top_duration = 700,
+        $back_to_top = $('.cd-top');
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+        ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+        if( $(this).scrollTop() > offset_opacity ) {
+            $back_to_top.addClass('cd-fade-out');
+        }
+    });
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+                scrollTop: 0
+            }, scroll_top_duration
+        );
+    });
 });
 
 lightGallery(document.getElementById('anchor-tag'));
