@@ -1,18 +1,4 @@
-$kamik-red: #f28973;
-$kamik-purple: #c08ebf;
-$kamik-blue: #53c5e0;
-$kamik-orange: #f9bc79;
-
 $img-dir: '../img/';
-$default-font-size: 12px;
-$expresion-color: #44A397;
-$dark-color: #2a2531;
-
-.green {color: #16a22c;}
-.red {color: #b01515;}
-.blue {color: #7e96a2;}
-
-
 $fonts-src: '../fonts/';
 
 html {
@@ -68,7 +54,6 @@ select {
 option {
   border: 1px solid #E1E1E1;
   display: inline-block;
-  margin-bottom: 6px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -116,6 +101,7 @@ img, video {
 textarea {
   resize: vertical;
 }
+
 input,
 textarea {
   bottom: 0;
@@ -129,6 +115,7 @@ textarea {
 input[placeholder] {
   font-style: italic;
 }
+
 input[type="radio"],
 input[type="checkbox"] {
   bottom: 0;
@@ -138,7 +125,6 @@ input[type="checkbox"] {
   padding: 10px 15px;
   width: auto;
 }
-
 
 .vk svg:hover #vk {
   fill: #4d76a1;
@@ -151,7 +137,6 @@ input[type="checkbox"] {
 .ok svg:hover #ok {
   fill: #f58220;
 }
-
 
 .vk, .fb, .ok  {
   display: inline-block;
@@ -173,7 +158,6 @@ input[type="checkbox"] {
 .visible {
   opacity: 1;
 }
-
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -198,14 +182,9 @@ input[type="checkbox"] + label::before{
   vertical-align: text-bottom;
 }
 
-
 input[type="checkbox"]:checked + label::before {
   background: url($img-dir + 'icon-check.png') 50% 50% no-repeat;
   background-color: #fbbb00;
-  //background-position: 50% 50%;
-  //background-repeat: no-repeat;
-  //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCS…AfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC);
-
 }
 
 

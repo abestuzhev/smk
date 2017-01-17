@@ -175,6 +175,16 @@ $(document).ready(function() {
         $('.popup_bg').toggleClass('is-visible');
         $('body').toggleClass('body-popup');
     });
+
+    /*********************************/
+    /*Ваша заявка отправлена*/
+    $(".popup-sent_close").click(function(event) {
+        event.preventDefault();
+        $('.popup-sent').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+
     /*********************************/
     /*popup mail*/
     $(".popup_btn-mail").click(function(event) {
@@ -196,6 +206,7 @@ $(document).ready(function() {
         $(this).toggleClass('is-visible');
         $('body').removeClass('body-popup');
     });
+
     $(".popup_back").click(function(event) {
         event.preventDefault();
         $('.popup').removeClass('popup-show');
@@ -211,7 +222,6 @@ $(document).ready(function() {
 
     $('.phone-mask').mask('+7(000)000-00-00');
     $('.mail-mask').mask('+7(000)000-00-00');
-
 
     //кнопка вверх
     var offset = 300,
@@ -229,7 +239,7 @@ $(document).ready(function() {
     $back_to_top.on('click', function(event){
         event.preventDefault();
         $('body,html').animate({
-                scrollTop: 0,
+                scrollTop: 0
             }, scroll_top_duration
         );
     });

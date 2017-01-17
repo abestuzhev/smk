@@ -11,7 +11,6 @@
     margin-top: .6em;
 
     &_item {
-      //display: inline-block;
       position: relative;
       color: #252525;
       font-size: .75em;
@@ -36,7 +35,6 @@
     display: inline-block;
     margin-right: 5px;
     margin-top: 4px;
-    // vertical-align: top;
   }
 
   &-menu {
@@ -107,6 +105,5 @@
       margin-top: -4px;
       background: url($img-dir + 'icon-mail-white.png') 0 0 no-repeat;
     }
-
   }
 }
