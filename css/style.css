@@ -17,15 +17,6 @@
   font-weight: 400;
   font-style: normal; }
 
-.green {
-  color: #16a22c; }
-
-.red {
-  color: #b01515; }
-
-.blue {
-  color: #7e96a2; }
-
 html {
   height: 100%;
   font-family: "Roboto"; }
@@ -72,7 +63,6 @@ select {
 option {
   border: 1px solid #E1E1E1;
   display: inline-block;
-  margin-bottom: 6px;
   padding: 0;
   margin: 0;
   text-align: center; }
@@ -471,7 +461,6 @@ input[type="checkbox"]:checked + label::before {
   .c-card-workers_picture {
     position: relative;
     text-align: center;
-    position: relative;
     margin-bottom: 24px; }
   .c-card-workers_img {
     height: 170px;
@@ -643,11 +632,9 @@ input[type="checkbox"]:checked + label::before {
   .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
     transition: opacity .3s 0s, visibility 0s 0s; }
   .cd-top.cd-is-visible {
-    /* the button becomes visible */
     visibility: visible;
     opacity: 1; }
   .cd-top.cd-fade-out {
-    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     opacity: .5; }
   .no-touch .cd-top:hover {
     background-color: white;
@@ -1398,12 +1385,12 @@ html {
 
 .footer-menu {
   text-align: justify;
-  font-family: "Roboto";
-  font-size: 0; }
+  font-family: "Roboto"; }
   .footer-menu::after {
     content: '';
     width: 100%;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 0; }
   .footer-menu_item {
     display: inline-block; }
   .footer-menu_link {

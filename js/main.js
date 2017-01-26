@@ -243,6 +243,17 @@ $(document).ready(function() {
             }, scroll_top_duration
         );
     });
+
+
+    $('.SlectBox').SumoSelect({
+        placeholder: 'This is a placeholder',
+        csvDispCount: 3
+    });
+
+    $('.testSelAll2').SumoSelect({
+        selectAll:true
+    });
+
 });
 
 lightGallery(document.getElementById('anchor-tag'));
