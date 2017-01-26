@@ -40,12 +40,12 @@
 .footer-menu {
   text-align: justify;
   font-family: "Roboto";
-  font-size: 0;
 
   &::after {
     content: '';
     width: 100%;
     display: inline-block;
+    font-size: 0;
   }
 
   &_item {
