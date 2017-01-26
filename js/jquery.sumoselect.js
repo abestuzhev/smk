@@ -15,7 +15,7 @@
 
         // This is the easiest way to have default options.
         var settings = $.extend({
-            placeholder: 'Select Here',   // Dont change it here.
+            placeholder: 'Выберите тип',   // Dont change it here.
             csvDispCount: 3,              // display no. of items in multiselect. 0 to display all.
             captionFormat:'{0} выбрано', // format of caption text. you can set your locale.
             captionFormatAllSelected:'{0} все выбраны!', // format of caption text when all elements are selected. set null to use captionFormat. It will not work if there are disabled elements in select.
