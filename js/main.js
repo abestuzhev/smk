@@ -244,7 +244,7 @@ $(document).ready(function() {
         );
     });
 
-<<<<<<< HEAD
+
   $(window).scroll(function(){
       var bo = $("body").scrollTop();
       // $('#hid').text(bo);
@@ -255,7 +255,6 @@ $(document).ready(function() {
       };
   })
 
-=======
 
     $('.SlectBox').SumoSelect({
         placeholder: 'This is a placeholder',
@@ -265,7 +264,6 @@ $(document).ready(function() {
     $('.testSelAll2').SumoSelect({
         selectAll:true
     });
->>>>>>> origin/gh-pages
 
 });
 
