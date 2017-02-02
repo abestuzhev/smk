@@ -1,3 +1,21 @@
+@media (min-width: 768px) {
+  .container, .header {
+    width: 760px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .header {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .header {
+    width: 980px;
+  }
+}
+
 @media (max-width: 992px) {
   .header-contact {
     margin-top: 1.5em;
@@ -64,6 +82,7 @@
   }
 
   .smk-layout {
+    padding-top: 120px;
     padding-bottom: 352px;
   }
 
@@ -74,6 +93,11 @@
 
 
 @media (max-width: 760px) {
+
+    .smk-layout {
+      padding-top: 22%;
+    }
+
   .workers-page .c-card-workers,
   .object-page .c-card-object {
     margin-right: 1%;
@@ -116,17 +140,6 @@
 }
 
 @media (max-width:640px) {
-  .header {
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ebf5f7;
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
-    padding: 0 10px;
-    padding-bottom: 5px;
-  }
 
   .smk-layout {
     padding-top: 13%;
@@ -158,7 +171,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 999;
     padding-top: 20px;
     padding-left: 10px;

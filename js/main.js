@@ -82,7 +82,7 @@ $(document).ready(function() {
             }
         ]
     });
-    
+
     $('.workers-slider').slick({
         autoplay: false,
         autoplaySpeed: 5000,
@@ -244,6 +244,18 @@ $(document).ready(function() {
         );
     });
 
+<<<<<<< HEAD
+  $(window).scroll(function(){
+      var bo = $("body").scrollTop();
+      // $('#hid').text(bo);
+      if ( bo > 20 ) {
+        $(".l-header").css("box-shadow", "0 7px 7px rgba(0, 0, 0, 0.08)");
+      } else {
+        $(".l-header").css("box-shadow", "none");
+      };
+  })
+
+=======
 
     $('.SlectBox').SumoSelect({
         placeholder: 'This is a placeholder',
@@ -253,6 +265,7 @@ $(document).ready(function() {
     $('.testSelAll2').SumoSelect({
         selectAll:true
     });
+>>>>>>> origin/gh-pages
 
 });
 
