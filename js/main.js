@@ -82,7 +82,7 @@ $(document).ready(function() {
             }
         ]
     });
-    
+
     $('.workers-slider').slick({
         autoplay: false,
         autoplaySpeed: 5000,
@@ -243,6 +243,26 @@ $(document).ready(function() {
             }, scroll_top_duration
         );
     });
+
+  // $(window).scroll(function () {
+  //   $(".l-header").css("box-shadow", "0 7px 7px rgba(0, 0, 0, 0.08)");
+  // });
+  //
+  // if(windows.scrollTop(0)) {
+  //   $(".l-header").css("box-shadow", "none");
+  // }
+
+  $(window).scroll(function(){
+      var bo = $("body").scrollTop();
+      // $('#hid').text(bo);
+      if ( bo > 20 ) {
+        $(".l-header").css("box-shadow", "0 7px 7px rgba(0, 0, 0, 0.08)");
+      } else {
+        $(".l-header").css("box-shadow", "none");
+      };
+  })
+
+
 });
 
 lightGallery(document.getElementById('anchor-tag'));

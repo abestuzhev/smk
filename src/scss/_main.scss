@@ -10,25 +10,6 @@ html {
   box-sizing: border-box;
 }
 
-
-@media (min-width: 768px) {
-  .container {
-    width: 760px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 980px;
-  }
-}
-
 .container {
   padding: 10px;
   margin-right: auto;
@@ -50,6 +31,7 @@ html {
 .smk-layout {
   min-height: 100%;
   position: relative;
+  padding-top: 80px;
   padding-bottom: 317px;
 
 }
@@ -701,7 +683,7 @@ html {
 
 .popup {
   position: fixed;
-  z-index: 9999;
+  z-index: 102;
   top: 50%;
   left: 50%;
   margin-left: -190px;
@@ -714,6 +696,7 @@ html {
 
   &_bg {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: #000;
