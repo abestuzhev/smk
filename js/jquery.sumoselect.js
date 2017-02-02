@@ -15,7 +15,7 @@
 
         // This is the easiest way to have default options.
         var settings = $.extend({
-            placeholder: 'Select Here',   // Dont change it here.
+            placeholder: 'Выберите тип',   // Dont change it here.
             csvDispCount: 3,              // display no. of items in multiselect. 0 to display all.
             captionFormat:'{0} выбрано', // format of caption text. you can set your locale.
             captionFormatAllSelected:'{0} все выбраны!', // format of caption text when all elements are selected. set null to use captionFormat. It will not work if there are disabled elements in select.
@@ -64,7 +64,7 @@
                     O.select.append(O.CaptionCont);
 
                     // default turn off if no multiselect
-                    if(!O.is_multi)settings.okCancelInMulti = false
+                    if(!O.is_multi)settings.okCancelInMulti = false;
 
                     if(O.E.attr('disabled'))
                         O.select.addClass('disabled').removeAttr('tabindex');
@@ -78,14 +78,14 @@
                         O.E.removeAttr('name');
                     }
 
-                    //break for mobile rendring.. if forceCustomRendering is false
+                    //break for mobile rendering.. if forceCustomRendering is false
                     if (O.isMobile() && !settings.forceCustomRendering) {
                         O.setNativeMobile();
                         return;
                     }
 
                     // if there is a name attr in select add a class to container div
-                    if(O.E.attr('name')) O.select.addClass('sumo_'+O.E.attr('name'))
+                    if(O.E.attr('name')) O.select.addClass('sumo_'+O.E.attr('name'));
 
                     //hide original select
                     O.E.addClass('SumoUnder').attr('tabindex','-1');
@@ -273,7 +273,7 @@
                         //select all checkbox state change.
                         if (sc == vc) O.selAll.removeClass('partial').addClass('selected');
                         else if (sc == 0) O.selAll.removeClass('selected partial');
-                        else O.selAll.addClass('partial')//.removeClass('selected');
+                        else O.selAll.addClass('partial'); //.removeClass('selected');
                     }
                 },
 
@@ -441,12 +441,31 @@
                             O.callChange();
                         }
 
-                        if (!O.is_multi) O.hideOpts(); //if its not a multiselect then hide on single select.
+                        if (!O.is_multi) O.hideOpts();
+                        //if its not a multiselect then hide on single select.
                     });
                 },
 
                 setText: function () {
                     var O = this;
+                    ////////////////////
+                    if (!O.is_multi) {
+                        O.placeholder = O.E.attr('placeholder');
+
+                        var optSel = O.E.siblings('.optWrapper').find('li'); //selected options.
+                        optSel.click(function(e){
+                            e.preventDefault();
+                            var text = $(this).children().text();
+                            O.caption.html(text);
+                            O.CaptionCont.attr('title', text);
+
+                        });
+                    }
+                    else {
+                        O.placeholder = O.E.find(':selected').not(':disabled').text();
+                    }
+                    /////////////
+
                     O.placeholder = "";
                     if (O.is_multi) {
                         sels = O.E.find(':selected').not(':disabled'); //selected options.
@@ -467,7 +486,10 @@
                     }
                     else {
                         O.placeholder = O.E.find(':selected').not(':disabled').text();
+                        O.placeholder = O.E.attr('placeholder');
+
                     }
+
 
                     is_placeholder = false;
 
@@ -476,11 +498,12 @@
                         is_placeholder = true;
 
                         O.placeholder = O.E.attr('placeholder');
-                        if (!O.placeholder)                  //if placeholder is there then set it
+                        if (!O.placeholder)
+                        //if placeholder is there then set it
                             O.placeholder = O.E.find('option:disabled:selected').text();
                     }
 
-                    O.placeholder = O.placeholder ? (settings.prefix + ' ' + O.placeholder) : settings.placeholder
+                    O.placeholder = O.placeholder ? (settings.prefix + ' ' + O.placeholder) : settings.placeholder;
 
                     //set display text
                     O.caption.html(O.placeholder);

@@ -1388,12 +1388,12 @@ html {
 
 .footer-menu {
   text-align: justify;
-  font-family: "Roboto";
-  font-size: 0; }
+  font-family: "Roboto"; }
   .footer-menu::after {
     content: '';
     width: 100%;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 0; }
   .footer-menu_item {
     display: inline-block; }
   .footer-menu_link {

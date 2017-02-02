@@ -62,30 +62,30 @@
                     <div class="search-object_select search-object_city">
                         <div class="search-object_city-title">Город</div>
                         <select class="SlectBox" placeholder="Выберите город">
-                            <option selected="selected">Архангельск</option>
-                            <option>Северодвинск</option>
-                            <option value="mercedes">Новодвинск</option>
+                            <option value="Архангельск">Архангельск</option>
+                            <option value="Северодвинск">Северодвинск</option>
+                            <option value="Новодвинск">Новодвинск</option>
                         </select>
                     </div>
                     <div class="search-object_select search-object_area">
                         <div class="search-object_city-title">Район</div>
                         <select multiple="multiple" placeholder="Выберите район" onchange="console.log($(this).children(':selected').length)" class="testSelAll2">
-                            <option value="volvo">Варавино-Фактория</option>
-                            <option value="saab">Исакогорский</option>
-                            <option selected value="audi">Ломоносовский</option>
-                            <option selected value="Маймаксанский">Маймаксанский</option>
-                            <option value="porsche">Октябрьский</option>
-                            <option value="ferrari">Майская Горка</option>
-                            <option value="mitsubishi">Соломбальский</option>
-                            <option value="mitsubishi">Цигломенский</option>
+                            <option value="Варавино-Фактория">Варавино-Фактория</option>
+                            <option value="Исакогорский">Исакогорский</option>
+                            <option value="Ломоносовский">Ломоносовский</option>
+                            <option value="Маймаксанский">Маймаксанский</option>
+                            <option value="Октябрьский">Октябрьский</option>
+                            <option value="Майская Горка">Майская Горка</option>
+                            <option value="Соломбальский">Соломбальский</option>
+                            <option value="Цигломенский">Цигломенский</option>
                         </select>
                     </div>
                     <div class="search-object_select search-object_type">
                         <div class="search-object_type-title">Тип</div>
                         <select class="SlectBox" placeholder="Выберите тип">
-                            <option selected="selected">Новостройка</option>
-                            <option>Вторичное жилье</option>
-                            <option>Все</option>
+                            <option value="Новостройка">Новостройка</option>
+                            <option value="Вторичное жилье">Вторичное жилье</option>
+                            <option value="Все">Все</option>
                         </select>
                     </div>
 
@@ -318,19 +318,20 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        window.asd = $('.SlectBox').SumoSelect({ csvDispCount: 3, captionFormatAllSelected: "Yeah, OK, so everything." });
-        window.test = $('.testsel').SumoSelect({okCancelInMulti:true, captionFormatAllSelected: "Yeah, OK, so everything." });
-        window.testSelAll = $('.testSelAll').SumoSelect({okCancelInMulti:true, selectAll:true });
-        window.testSelAlld = $('.SlectBox-grp').SumoSelect({okCancelInMulti:true, selectAll:true });
+//        window.asd = $('.SlectBox').SumoSelect({ placeholder: 'This is a placeholder'});
+//        window.asd = $('.SlectBox').SumoSelect({ csvDispCount: 3, captionFormatAllSelected: "Yeah, OK, so everything." });
+//        window.test = $('.testsel').SumoSelect({okCancelInMulti:true, captionFormatAllSelected: "Yeah, OK, so everything." });
+//        window.testSelAll = $('.testSelAll').SumoSelect({okCancelInMulti:true, selectAll:true });
+//        window.testSelAlld = $('.SlectBox-grp').SumoSelect({okCancelInMulti:true, selectAll:true });
 
-        window.testSelAll2 = $('.testSelAll2').SumoSelect({selectAll:true });
+//        window.testSelAll2 = $('.testSelAll2').SumoSelect({selectAll:true });
 
 
-        window.Search = $('.search-box').SumoSelect({ csvDispCount: 3, search: true, searchText:'Enter here.' });
-        window.searchSelAll = $('.search-box-sel-all').SumoSelect({ csvDispCount: 3, selectAll:true, search: true, searchText:'Enter here.', okCancelInMulti:true });
-        window.searchSelAll = $('.search-box-open-up').SumoSelect({ csvDispCount: 3, selectAll:true, search: false, searchText:'Enter here.', up:true });
-
-        window.groups_eg_g = $('.groups_eg_g').SumoSelect({selectAll:true, search:true });
+//        window.Search = $('.search-box').SumoSelect({ csvDispCount: 3, search: true, searchText:'Enter here.' });
+//        window.searchSelAll = $('.search-box-sel-all').SumoSelect({ csvDispCount: 3, selectAll:true, search: true, searchText:'Enter here.', okCancelInMulti:true });
+//        window.searchSelAll = $('.search-box-open-up').SumoSelect({ csvDispCount: 3, selectAll:true, search: false, searchText:'Enter here.', up:true });
+//
+//        window.groups_eg_g = $('.groups_eg_g').SumoSelect({selectAll:true, search:true });
     });
 </script>
 
