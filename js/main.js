@@ -244,14 +244,6 @@ $(document).ready(function() {
         );
     });
 
-  // $(window).scroll(function () {
-  //   $(".l-header").css("box-shadow", "0 7px 7px rgba(0, 0, 0, 0.08)");
-  // });
-  //
-  // if(windows.scrollTop(0)) {
-  //   $(".l-header").css("box-shadow", "none");
-  // }
-
   $(window).scroll(function(){
       var bo = $("body").scrollTop();
       // $('#hid').text(bo);
