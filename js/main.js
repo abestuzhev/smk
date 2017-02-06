@@ -244,14 +244,19 @@ $(document).ready(function() {
         );
     });
 
-
   $(window).scroll(function(){
       var bo = $("body").scrollTop();
       // $('#hid').text(bo);
       if ( bo > 20 ) {
-        $(".l-header").css("box-shadow", "0 7px 7px rgba(0, 0, 0, 0.08)");
+        $(".l-header").css({
+          "box-shadow": "0 7px 7px rgba(0, 0, 0, 0.08)",
+          "position": "fixed"
+        });
       } else {
-        $(".l-header").css("box-shadow", "none");
+        $(".l-header").css({
+          "box-shadow": "none",
+          "position": "absolute"
+        });
       };
   })
 
