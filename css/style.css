@@ -1264,7 +1264,7 @@ html {
     font-size: 14.6em; }
 
 .l-header {
-  position: fixed;
+  position: absolute;
   z-index: 99;
   top: 0;
   width: 100%;
