@@ -116,6 +116,7 @@ input[placeholder] {
   font-style: italic;
 }
 
+
 input[type="radio"],
 input[type="checkbox"] {
   bottom: 0;
@@ -187,4 +188,12 @@ input[type="checkbox"]:checked + label::before {
   background-color: #fbbb00;
 }
 
+//disabled
 
+input:disabled + label {
+  color: #E1E1E1;
+}
+
+input:disabled + label::before {
+  background-color: #E1E1E1;
+}
