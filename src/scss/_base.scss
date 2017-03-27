@@ -189,7 +189,13 @@ input[type="checkbox"]:checked + label::before {
 }
 
 //disabled
+//для текстовых полей
+input:disabled {
+  color: #E1E1E1;
+  background-color: #E1E1E1;
+}
 
+//для checkbox и radio
 input:disabled + label {
   color: #E1E1E1;
 }
