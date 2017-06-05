@@ -655,3 +655,87 @@
     opacity: 1;
   }
 }
+
+.с-card-apartment-scheme {
+
+  color: #1b1b1b;
+
+  &_header {
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &_info {
+    float: left;
+    margin-right: 53px;
+  }
+  &_price {
+    float: left;
+
+    &-number {
+      font-size: 30px;
+      font-weight: 700;
+      font-family: Stem, sans-serif;
+    }
+  }
+  &_booking {
+    float: right;
+    .l-button {
+      padding: 10px 0;
+    }
+  }
+
+  &_text {
+    font-size: 16px;
+    line-height: 1.1;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 4px;
+  }
+
+  &_title-item {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Stem, sans-serif;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .с-card-apartment-scheme_info {
+    margin-right: 26px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .с-card-apartment-scheme_booking {
+    width: 100%;
+  }
+}
+
+
+@media all and (max-width: 500px) {
+  .с-card-apartment-scheme_info,
+  .с-card-apartment-scheme_price {
+    float: none;
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .с-card-apartment-scheme_booking {
+    float: none;
+    text-align: left;
+  }
+}
+
+@media all and (max-width: 380px) {
+
+  .с-card-apartment-scheme_booking .c-button {
+    font-size: .93em;
+  }
+}

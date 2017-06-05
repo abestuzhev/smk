@@ -30,7 +30,8 @@ body {
 *,
 *::after,
 *::before {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 ul {
   list-style: none;
@@ -88,6 +89,8 @@ img, video {
   height: auto; }
 
 .c-card-object:hover .c-icon-object_window, .c-card-object:hover .c-icon-object_window i, .c-card-object:hover .c-card-object_link, .c-card-object:hover .c-card-object_link span::after, .c-card-object_picture::before, .c-card-object_picture::after, .c-card-object_link, .c-card-object_link span::after, .c-icon-object_window, .c-icon-object_window i:first-child, .c-icon-object_window i:last-child, .c-button, .c-button:hover, .floor-item, .floor-item:hover, .header-menu_mobile, .header-menu_mobile:hover, .footer-menu_mobile, .footer-menu_mobile:hover {
+  -webkit-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
   transition: all .2s ease-out; }
 
 .l-layout {
@@ -107,7 +110,8 @@ textarea {
   width: 100%;
   border: 1px solid #DCDCDC;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
 
 input[placeholder] {
   font-style: italic; }
@@ -186,19 +190,30 @@ input:disabled + label::before {
 
 .c-card-object {
   display: inline-block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 210px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px transparent;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px transparent;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px transparent;
   position: relative;
   outline: 2px solid transparent;
+  -webkit-transition: -webkit-box-shadow .2s ease-out;
+  transition: -webkit-box-shadow .2s ease-out;
+  -o-transition: box-shadow .2s ease-out;
   transition: box-shadow .2s ease-out;
+  transition: box-shadow .2s ease-out, -webkit-box-shadow .2s ease-out;
   margin: 0 8px;
   margin-bottom: 16px; }
   .c-card-object:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px #fbc455;
-    transition: box-shadow .2s ease-out; }
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px #fbc455;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.08), inset 0 0 0 2px #fbc455;
+    -webkit-transition: -webkit-box-shadow .2s ease-out;
+    transition: -webkit-box-shadow .2s ease-out;
+    -o-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out, -webkit-box-shadow .2s ease-out; }
   .c-card-object:hover .c-card-object_picture::before,
   .c-card-object:hover .c-card-object_picture::after {
     opacity: 1; }
@@ -290,7 +305,8 @@ input:disabled + label::before {
 .c-card-object--line .c-card-object {
   width: 100%; }
   .c-card-object--line .c-card-object:hover {
-    box-shadow: none; }
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .c-card-object--line .c-card-object:hover .c-card-object_picture::before,
   .c-card-object--line .c-card-object:hover .c-card-object_picture::after {
     opacity: 0; }
@@ -329,7 +345,8 @@ input:disabled + label::before {
     height: 9px;
     position: absolute;
     background-color: #000;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     bottom: 3px;
     left: 50%;
     margin-left: -4px; }
@@ -403,7 +420,8 @@ input:disabled + label::before {
 .c-tabs {
   font-family: "Stem";
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
   .c-tabs .tabs-menu {
     font-size: 0; }
     .c-tabs .tabs-menu_item {
@@ -463,7 +481,8 @@ input:disabled + label::before {
   width: 210px;
   font-family: "Roboto";
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   margin: 0 8px;
   margin-bottom: 16px;
   display: inline-block;
@@ -542,7 +561,8 @@ input:disabled + label::before {
 
 .c-card-stock {
   background-color: #FFF;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
   .c-card-stock::after {
     content: '';
     display: block;
@@ -638,8 +658,12 @@ input:disabled + label::before {
   white-space: nowrap;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -o-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s; }
   .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -o-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s; }
   .cd-top.cd-is-visible {
     visibility: visible;
@@ -650,6 +674,61 @@ input:disabled + label::before {
     background-color: white;
     opacity: 1; }
 
+.с-card-apartment-scheme {
+  color: #1b1b1b; }
+  .с-card-apartment-scheme_header {
+    margin-bottom: 20px; }
+    .с-card-apartment-scheme_header::after {
+      content: '';
+      display: block;
+      clear: both; }
+  .с-card-apartment-scheme_info {
+    float: left;
+    margin-right: 53px; }
+  .с-card-apartment-scheme_price {
+    float: left; }
+    .с-card-apartment-scheme_price-number {
+      font-size: 30px;
+      font-weight: 700;
+      font-family: Stem, sans-serif; }
+  .с-card-apartment-scheme_booking {
+    float: right; }
+    .с-card-apartment-scheme_booking .l-button {
+      padding: 10px 0; }
+  .с-card-apartment-scheme_text {
+    font-size: 16px;
+    line-height: 1.1;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 4px; }
+  .с-card-apartment-scheme_title-item {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Stem, sans-serif; }
+
+@media all and (max-width: 992px) {
+  .с-card-apartment-scheme_info {
+    margin-right: 26px; } }
+
+@media all and (max-width: 767px) {
+  .с-card-apartment-scheme_booking {
+    width: 100%; } }
+
+@media all and (max-width: 500px) {
+  .с-card-apartment-scheme_info,
+  .с-card-apartment-scheme_price {
+    float: none;
+    width: 100%;
+    margin-bottom: 14px; }
+  .с-card-apartment-scheme_booking {
+    float: none;
+    text-align: left; } }
+
+@media all and (max-width: 380px) {
+  .с-card-apartment-scheme_booking .c-button {
+    font-size: .93em; } }
+
 html {
   height: 100%;
   margin: 0;
@@ -658,7 +737,8 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .container {
   padding: 10px;
@@ -783,7 +863,8 @@ html {
   background: url("../img/icon-download.png") 0 0 no-repeat; }
 
 .c-card-object {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-right: 4px;
   margin-left: 4px; }
 
@@ -848,7 +929,8 @@ html {
 
 .home-slider .slick-list,
 .stock-slider .slick-list {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08); }
 
 .slick-next {
   right: 4px; }
@@ -899,7 +981,8 @@ html {
 
 .application {
   background-color: #FFF;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   position: relative; }
   .application::after {
     content: '';
@@ -1180,7 +1263,8 @@ html {
   width: 380px;
   padding: 28px 26px 18px;
   background-color: #FFF;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   display: none; }
   .popup_bg {
     position: fixed;
@@ -2406,7 +2490,8 @@ html {
 @media (max-width: 560px) {
   .c-card-object {
     margin-right: 0;
-    box-shadow: 0 0 5px transparent, inset 0 0 0 2px transparent; }
+    -webkit-box-shadow: 0 0 5px transparent, inset 0 0 0 2px transparent;
+            box-shadow: 0 0 5px transparent, inset 0 0 0 2px transparent; }
   .c-card-stock_img {
     width: 220px;
     padding: 0;
