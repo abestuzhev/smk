@@ -114,6 +114,7 @@
 .manual-sub-list__title {
     cursor: pointer;
     padding: 2px 4px 2px 0;
+    color: #4b4949;
 }
 
 .manual-sub-list__title--icon::after {
