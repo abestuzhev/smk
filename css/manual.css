@@ -1,0 +1,171 @@
+.manual-body {
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.08);
+
+    padding: 18px 26px;
+
+}
+.manual::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.manual-info {
+    position: relative;
+    background-color: #fff;
+    padding: 18px 26px;
+    color: #656565;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 23px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.08);
+}
+
+.manual-info__close {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+}
+
+.manual-info__close::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    width: 14px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+.manual-info__close::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    width: 14px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(-45deg);
+}
+
+.manual-info__img {
+    float: left;
+}
+
+.manual-info__img img{
+    width: 176px;
+}
+.manual-info__text {
+    margin-left: 210px;
+    height: 82px;
+    overflow: hidden;
+}
+
+.manual ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.manual li > ol {
+    margin: 4px 0 4px 40px;
+}
+
+.manual-list ol > li {
+    color: #4b4949;
+    font-weight: 400;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.manual li:before {
+    /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+    counter-increment: li;
+    /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+    content: counters(li,".") ". ";
+    padding: 2px 0 2px 4px;
+}
+
+.manual-list__item.manual-list__hover::before {
+    counter-increment: li;
+    background-color: #fbbb00;
+    color: #000;
+    content: counters(li,".") ". ";
+}
+
+.manual-sub-list {
+    display: none;
+}
+
+.manual-sub-list__link{
+    color: #4b4949;
+    padding: 2px 4px 2px 0;
+}
+
+.manual-sub-list__title {
+    cursor: pointer;
+    padding: 2px 4px 2px 0;
+}
+
+.manual-sub-list__title--icon::after {
+    content: '↓';
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    vertical-align: top;
+    color: #9ea5a7;
+}
+
+.manual-sub-list__title--icon.sub-list__open::after {
+    content: '↑';
+    color: #000;
+}
+
+.manual-sub-list__link:hover,
+.manual-sub-list__title:hover {
+
+    background-color: #fbbb00;
+    color: #000;
+}
+
+.manual-sub-list__title:hover::after {
+    color: #000;
+}
+
+/*.manual-sub-list__title:hover .manual-list__item::before {*/
+    /*counter-increment: li;*/
+    /*background-color: #fbbb00;*/
+    /*color: #000;*/
+    /*content: counters(li,".") ". ";*/
+/*}*/
+
+
+
+.manual-list__link:hover .manual-list__item::before {
+    counter-increment: li;
+    content: counters(li,".") ". ";
+    background-color: #fbbb00;
+    color: #000;
+}
+
+.manual-list__item-title {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #383838;
+    text-transform: uppercase;
+    font-family: "Stem";
+    font-weight: 700;
+    padding: 24px 0;
+    border-bottom: 6px dotted #ebf5f7;
+}
+
+.manual-list__item-title:last-child {
+    border: none;
+}
+
