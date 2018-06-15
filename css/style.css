@@ -758,7 +758,7 @@ html {
 .smk-layout {
   min-height: 100%;
   position: relative;
-  padding-top: 80px;
+  /*padding-top: 80px;*/
   padding-bottom: 317px; }
 
 .city-layout {
@@ -2388,7 +2388,7 @@ html {
   .search-object_title {
     margin-bottom: 8px; }
   .smk-layout {
-    padding-top: 120px;
+    /*padding-top: 120px;*/
     padding-bottom: 352px; }
   .footer {
     margin-top: -352px; } }

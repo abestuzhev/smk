@@ -1,5 +1,43 @@
 $(document).ready(function() {
 
+    /*слайдер в ходе строительства*/
+    $('.building-slider').slick({
+        // autoplay: false,
+        // autoplaySpeed: 5000,
+        // dots: false,
+        // arrows: true,
+        infinite: true,
+        speed: 500,
+        // adaptiveHeight: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+
     /*slider*/
     $('.home-slider').slick({
         autoplay: true,
