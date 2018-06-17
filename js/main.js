@@ -1,8 +1,14 @@
 $(document).ready(function() {
 
+    /*переменная слайдера*/
+    var $buildingSlider = $('.building-slider');
+
+    //свернуть/развернуть ход строительства в карточке дома
+
+
     /*слайдер в ходе строительства*/
-    $('.building-slider').slick({
-        // autoplay: false,
+    $buildingSlider.slick({
+        autoplay: false,
         // autoplaySpeed: 5000,
         // dots: false,
         // arrows: true,
@@ -34,6 +40,16 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+
+    $('.building-card__body').slideUp(300);
+    $('.building-card__header').on('click', function(){
+        $(this).siblings('.building-card__body').slideToggle(300);
+        $(this).toggleClass('active');
+    });
+
+    $('.building-card__header').on('click', function(){
+        $buildingSlider.slick('refresh');
     });
 
 
