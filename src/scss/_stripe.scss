@@ -1,0 +1,187 @@
+/*-----------------------------------*/
+/*-----------------------------------*/
+/*новое оформление покупки квартиры*/
+/*-----------------------------------*/
+/*-----------------------------------*/
+
+.stripe {
+    position: relative;
+
+    font-family: 'Stem', sans-serif;
+    &-bg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &-points {
+
+    }
+
+    &-point {
+        position: absolute;
+        cursor: pointer;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+
+        &:hover {
+            .stripe-point__section {
+                left:-33px;
+                -webkit-transition: all .2s ease;
+                -moz-transition: all .2s ease;
+                -ms-transition: all .2s ease;
+                -o-transition: all .2s ease;
+                transition: all .2s ease;
+            }
+            .stripe-point__room {
+                left:33px;
+                -webkit-transition: all .2s ease;
+                -moz-transition: all .2s ease;
+                -ms-transition: all .2s ease;
+                -o-transition: all .2s ease;
+                transition: all .2s ease;
+            }
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+        }
+
+        &-1 {
+            top: 10%;
+            left: 50%;
+            transform:translateX(-50%);
+
+        }
+
+        &-2 {
+
+        }
+
+        &-3 {
+
+        }
+
+        &-4 {
+
+        }
+
+        &-5 {
+
+        }
+
+        &__section {
+            width: 71px;
+            height: 71px;
+            border-radius: 100px;
+            background-color: #fbc455;
+            position: absolute;
+            font-size: 13px;
+            left: 0;
+            top: 50%;
+            transform:translateY(-50%);
+            z-index: 2;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+        }
+
+        &__room {
+            //opacity: 0;
+            //visibility: hidden;
+            width: 70px;
+            height: 70px;
+            border-radius: 100px;
+            background-color: #e31e24;
+            font-size: 11px;
+            color: #ffffff;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 50%;
+            transform:translateY(-50%);
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+
+        }
+
+        &__text {
+            text-align: center;
+            line-height: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            width: 62px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*/
+/*-----------------------------------*/
+/*END новое оформление покупки квартиры*/
+/*-----------------------------------*/
+/*-----------------------------------*/
