@@ -2462,66 +2462,74 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 40px 0; }
+    padding: 40px 0;
+    display: none; }
     .stripe-floor__head {
       position: relative;
       min-height: 120px; }
+      .stripe-floor__head::after {
+        content: '';
+        clear: both;
+        display: table; }
     .stripe-floor__scheme {
       text-align: center; }
       .stripe-floor__scheme img {
         display: inline-block; }
-    .stripe-floor__point .stripe-point {
-      position: relative;
-      top: auto;
-      left: auto;
-      display: inline-block; }
-      .stripe-floor__point .stripe-point::after {
-        content: '';
-        clear: both;
-        display: table; }
-      .stripe-floor__point .stripe-point .stripe-point__section {
+    .stripe-floor__point {
+      float: left; }
+      .stripe-floor__point .stripe-point {
+        position: relative;
+        top: auto;
         left: auto;
-        position: relative;
-        top: auto;
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
-        float: left; }
-        .stripe-floor__point .stripe-point .stripe-point__section .stripe-point__content {
-          background-color: #e31e24;
-          border: 6px solid #fff;
-          color: #ffffff;
-          width: 90px;
-          height: 90px;
-          font-size: 18px; }
-      .stripe-floor__point .stripe-point .stripe-point__room {
-        left: -6px;
-        position: relative;
-        top: auto;
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
-        float: left;
-        width: 100px;
-        height: 100px; }
-        .stripe-floor__point .stripe-point .stripe-point__room .stripe-point__content {
+        display: inline-block; }
+        .stripe-floor__point .stripe-point::after {
+          content: '';
+          clear: both;
+          display: table; }
+        .stripe-floor__point .stripe-point .stripe-point__section {
+          left: auto;
+          position: relative;
+          top: auto;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          float: left; }
+          .stripe-floor__point .stripe-point .stripe-point__section .stripe-point__content {
+            background-color: #e31e24;
+            border: 6px solid #fff;
+            color: #ffffff;
+            width: 90px;
+            height: 90px;
+            font-size: 18px; }
+        .stripe-floor__point .stripe-point .stripe-point__room {
+          left: -6px;
+          position: relative;
+          top: auto;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          float: left;
           width: 100px;
-          height: 100px;
-          font-size: 15px; }
-          .stripe-floor__point .stripe-point .stripe-point__room .stripe-point__content .stripe-point__text {
-            width: 90%; }
-      .stripe-floor__point .stripe-point .stripe-point__arrow {
-        border-top-color: #e31e24;
-        bottom: -28px;
-        left: 50%;
-        margin-left: -11px; }
+          height: 100px; }
+          .stripe-floor__point .stripe-point .stripe-point__room .stripe-point__content {
+            width: 100px;
+            height: 100px;
+            font-size: 15px; }
+            .stripe-floor__point .stripe-point .stripe-point__room .stripe-point__content .stripe-point__text {
+              width: 90%; }
+        .stripe-floor__point .stripe-point .stripe-point__arrow {
+          border-top-color: #e31e24;
+          bottom: -28px;
+          left: 50%;
+          margin-left: -11px; }
     .stripe-floor__num {
       position: absolute;
       top: -20px;
       left: 50%;
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
-              transform: translateX(-50%); }
+              transform: translateX(-50%);
+      text-align: center; }
       .stripe-floor__num .floor-nav {
         display: inline-block;
         position: relative; }
@@ -2549,6 +2557,124 @@ html {
           margin-left: -10px;
           border-top: 18px solid #fbbb00;
           cursor: pointer; }
+      .stripe-floor__num .floor-return {
+        font-size: 18px;
+        text-align: center; }
+        .stripe-floor__num .floor-return a {
+          color: #000;
+          text-align: center;
+          border-bottom: 1px dotted #000; }
+    .stripe-floor__legends {
+      float: right; }
+      .stripe-floor__legends::after {
+        content: '';
+        clear: both;
+        display: table; }
+  .stripe-legend-list {
+    float: left;
+    margin-right: 30px; }
+    .stripe-legend-list:last-child {
+      margin: 0; }
+  .stripe-legend-item {
+    margin-bottom: 6px; }
+  .stripe-legend-card::after {
+    content: '';
+    clear: both;
+    display: table; }
+  .stripe-legend-card__color {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+    top: 3px; }
+  .stripe-legend-card__text {
+    font-size: 15px;
+    color: #000000;
+    float: left; }
+  .stripe-apartment {
+    background-color: #fff;
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 960px;
+    height: 100%;
+    padding: 40px 30px;
+    border-left: 3px solid #ebf5f7;
+    border-right: 3px solid #ebf5f7;
+    display: none; }
+    .stripe-apartment .floor-nav-content {
+      padding: 10px 0; }
+    .stripe-apartment .stripe-floor__head {
+      margin-bottom: 45px; }
+    .stripe-apartment .stripe-apartment__body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      width: 100%; }
+      .stripe-apartment .stripe-apartment__body::after {
+        content: '';
+        clear: both;
+        display: table; }
+    .stripe-apartment-info {
+      width: 20%; }
+      .stripe-apartment-info__item {
+        font-size: 18px;
+        margin-bottom: 15px; }
+        .stripe-apartment-info__item span {
+          display: block; }
+      .stripe-apartment-info__price {
+        color: #0b9e54;
+        font-weight: 700; }
+    .stripe-apartment__scheme {
+      width: 60%;
+      text-align: center; }
+    .stripe-apartment-btns {
+      width: 20%; }
+      .stripe-apartment-btns__item {
+        margin-bottom: 17px; }
+    .stripe-apartment-btn {
+      display: inline-block;
+      width: 190px;
+      padding: 12px 24px 12px 48px;
+      position: relative;
+      background-color: #0b9e54;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+      .stripe-apartment-btn:hover {
+        opacity: .9;
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
+      .stripe-apartment-btn__icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+      .stripe-apartment-btn--act {
+        background-color: #fbbb00;
+        color: #000000; }
   .stripe-popup-close {
     cursor: pointer;
     position: absolute;

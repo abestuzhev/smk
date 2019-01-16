@@ -194,10 +194,17 @@
         width: 100%;
         height: 100%;
         padding: 40px 0;
+        display: none;
 
         &__head {
             position: relative;
             min-height: 120px;
+
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
         }
 
         &__scheme {
@@ -209,6 +216,7 @@
         }
 
         &__point {
+            float: left;
             .stripe-point {
                 position: relative;
                 top: auto;
@@ -273,6 +281,7 @@
             top: -20px;
             left: 50%;
             transform:translateX(-50%);
+            text-align: center;
 
             .floor-nav {
                 display: inline-block;
@@ -312,14 +321,174 @@
                 }
             }
 
+            .floor-return {
+                font-size: 18px;
+                text-align: center;
+
+                a {
+                    color: #000;
+                    text-align: center;
+                    border-bottom: 1px dotted #000;
+                }
+            }
+
         }
 
         &__legends {
 
+            float: right;
+
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
         }
     }
 
+    &-legends {
+    }
 
+    &-legend {
+
+        &-list {
+            float: left;
+            margin-right: 30px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &-item {
+            margin-bottom: 6px;
+        }
+
+        &-card {
+
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            &__color {
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+                float: left;
+                position: relative;
+                top: 3px;
+            }
+
+            &__text {
+                font-size: 15px;
+                color: #000000;
+                float: left;
+            }
+        }
+    }
+
+    &-apartment {
+        background-color: #fff;
+        position: absolute;
+        z-index: 12;
+        top: 0;
+        left: 50%;
+        transform:translateX(-50%);
+        width: 960px;
+        height: 100%;
+        padding: 40px 30px;
+        border-left: 3px solid #ebf5f7;
+        border-right: 3px solid #ebf5f7;
+        display: none;
+
+        .floor-nav-content {
+            padding: 10px 0;
+        }
+
+        .stripe-floor__head {
+            margin-bottom: 45px;
+        }
+
+        .stripe-apartment__body {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+        }
+
+        &-info {
+            width: 20%;
+
+            &__item {
+                font-size: 18px;
+                margin-bottom: 15px;
+
+                span {
+                    display: block;
+                }
+            }
+
+            &__price {
+                color: #0b9e54;
+                font-weight: 700;
+            }
+        }
+
+        &__scheme {
+            width: 60%;
+            text-align: center;
+
+        }
+
+        &-btns {
+            width: 20%;
+
+            &__item {
+                margin-bottom: 17px;
+            }
+        }
+
+        &-btn {
+            display: inline-block;
+            width: 190px;
+            padding: 12px 24px 12px 48px;
+            position: relative;
+            background-color: #0b9e54;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: uppercase;
+            transition: all .2s ease;
+
+            &:hover {
+                opacity: .9;
+                transition: all .2s ease;
+            }
+
+
+            &__icon {
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform:translateY(-50%);
+
+            }
+
+            &--act {
+                background-color: #fbbb00;
+                color: #000000;
+            }
+        }
+    }
 
     &-popup {
         &-close {
