@@ -1,4 +1,30 @@
 $(document).ready(function() {
+    
+    
+    /*клик по этажу*/
+    $(document).on('click', '.stripe-section-floor', function(e){
+        e.preventDefault();
+        $('.stripe-floor').addClass('is-show');
+    });
+
+    $(document).on('click', '.stripe-section-mobile__item', function(e){
+        e.preventDefault();
+        $('.stripe-floor').addClass('is-show');
+        $(this).siblings('').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(document).on('click', '.stripe-popup-close', function(e){
+        e.preventDefault();
+        $(this).parent().removeClass('is-show');
+
+        $('.stripe-section-mobile__item').removeClass('active');
+    });
+
+    $(document).on('click', '.stripe-legend-mobile', function(e){
+        e.preventDefault();
+        $('.stripe-floor__legends').addClass('is-show');
+    });
 
     /*переменная слайдера*/
     var $buildingSlider = $('.building-slider');

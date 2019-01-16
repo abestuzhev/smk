@@ -2344,9 +2344,12 @@ html {
   position: relative;
   font-family: 'Stem', sans-serif; }
   .stripe-bg {
-    display: block;
-    width: 100%;
-    height: auto; }
+    position: relative;
+    width: 100%; }
+    .stripe-bg img {
+      display: block;
+      width: 100%;
+      height: auto; }
   .stripe-point {
     display: block;
     position: absolute;
@@ -2457,13 +2460,24 @@ html {
   .stripe-floor {
     background-color: #fff;
     position: absolute;
-    z-index: 10;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 40px 0;
-    display: none; }
+    padding: 40px 16px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    .stripe-floor.is-show {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
     .stripe-floor__head {
       position: relative;
       min-height: 120px; }
@@ -2570,6 +2584,20 @@ html {
         content: '';
         clear: both;
         display: table; }
+      .stripe-floor__legends .stripe-popup-close {
+        display: none; }
+  .stripe-legend-mobile {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    right: 30px;
+    top: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+    line-height: 1.4;
+    font-weight: 500; }
   .stripe-legend-list {
     float: left;
     margin-right: 30px; }
@@ -2680,8 +2708,8 @@ html {
     position: absolute;
     top: 10px;
     right: 20px;
-    width: 20px;
-    height: 20px; }
+    width: 30px;
+    height: 30px; }
     .stripe-popup-close::before {
       content: '';
       border: none;
@@ -2708,6 +2736,103 @@ html {
       height: 2px;
       border-radius: 20px;
       background-color: #111; }
+  .stripe-section {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .stripe-section svg {
+      width: 100%;
+      height: 100%; }
+    .stripe-section-floor {
+      opacity: 0;
+      fill: #FABA00;
+      enable-background: new;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      cursor: pointer; }
+      .stripe-section-floor:hover {
+        opacity: .5;
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
+    .stripe-section-mobile {
+      display: none;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+              box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+      padding: 27px 20px 20px;
+      margin-bottom: 20px; }
+      .stripe-section-mobile__title {
+        color: #fbbb00;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        font-weight: 700; }
+      .stripe-section-mobile__item {
+        fill: #FAC455;
+        cursor: pointer; }
+        .stripe-section-mobile__item.active {
+          fill: #ffe400; }
+        .stripe-section-mobile__item:hover {
+          fill: #ffe400; }
+
+@media (max-width: 960px) {
+  .stripe-floor {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: none;
+    opacity: 1; }
+    .stripe-floor.is-show {
+      display: block; } }
+
+@media (max-width: 800px) {
+  .stripe-apartment .stripe-point__section,
+  .stripe-apartment .stripe-point__arrow,
+  .stripe-floor .stripe-point__section,
+  .stripe-floor .stripe-point__arrow {
+    display: none; }
+  .stripe-floor__legends {
+    display: none; }
+  .stripe-legend-mobile {
+    display: block; }
+  .stripe-floor__point .stripe-point .stripe-point__room {
+    left: 0; }
+  .stripe-floor__legends.is-show {
+    position: absolute;
+    display: block;
+    z-index: 50;
+    top: -40px;
+    left: -16px;
+    right: -16px;
+    background-color: #fff;
+    padding: 14px 16px; }
+    .stripe-floor__legends.is-show .stripe-popup-close {
+      display: block; }
+  .stripe-legend-list {
+    margin: 0 10px 10px 0; } }
+
+@media (max-width: 700px) {
+  .stripe-bg {
+    display: none; }
+  .stripe-section-mobile {
+    display: block; }
+  .stripe {
+    padding: 10px;
+    margin-bottom: 17px; } }
+
+@media (max-width: 480px) {
+  .stripe-legend-mobile {
+    right: 10px;
+    font-size: 12px; }
+  .stripe-floor__point .stripe-point .stripe-point__room .stripe-point__content {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    font-size: 11px; }
+  .stripe-floor__point .stripe-point .stripe-point__room {
+    width: auto;
+    height: auto; } }
 
 /*-----------------------------------*/
 /*-----------------------------------*/
