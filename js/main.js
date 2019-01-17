@@ -5,6 +5,20 @@ $(document).ready(function() {
     $(document).on('click', '.stripe-section-floor', function(e){
         e.preventDefault();
         $('.stripe-floor').addClass('is-show');
+        scrollTop('.stripe-floor');
+
+        $stripeFloorSlider.slick({
+            autoplay: false,
+            // autoplaySpeed: 5000,
+            // dots: false,
+            // arrows: true,
+            infinite: false,
+            speed: 500,
+            // fade: true,
+            // cssEase: 'linear',
+            prevArrow: $('.floor-nav-up'),
+            nextArrow: $('.floor-nav-down')
+        });
     });
 
     $(document).on('click', '.stripe-section-mobile__item', function(e){
@@ -29,6 +43,7 @@ $(document).ready(function() {
     $(document).on('click', '.stripe-room', function(e){
         e.preventDefault();
         $('.stripe-apartment').addClass('is-show');
+        scrollTop('.stripe');
     });
 
     var $stripeFloorSlider = $('.stripe-floor-scheme__slider');
@@ -40,18 +55,14 @@ $(document).ready(function() {
         $status.text(i);
     });
 
-    $stripeFloorSlider.slick({
-        autoplay: false,
-        // autoplaySpeed: 5000,
-        // dots: false,
-        // arrows: true,
-        infinite: false,
-        speed: 500,
-        // fade: true,
-        // cssEase: 'linear',
-        prevArrow: $('.floor-nav-up'),
-        nextArrow: $('.floor-nav-down')
-    });
+
+
+
+    function scrollTop (elem){
+        // $(elem).scrollTop();
+        var top = $(elem).offset().top;
+        $('html').animate({scrollTop: top}, 500);
+    }
 
     /*переменная слайдера*/
     var $buildingSlider = $('.building-slider');
