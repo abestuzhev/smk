@@ -26,6 +26,33 @@ $(document).ready(function() {
         $('.stripe-floor__legends').addClass('is-show');
     });
 
+    $(document).on('click', '.stripe-room', function(e){
+        e.preventDefault();
+        $('.stripe-apartment').addClass('is-show');
+    });
+
+    var $stripeFloorSlider = $('.stripe-floor-scheme__slider');
+    var $status = $('.floor-nav-pos span');
+
+    $stripeFloorSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i);
+    });
+
+    $stripeFloorSlider.slick({
+        autoplay: false,
+        // autoplaySpeed: 5000,
+        // dots: false,
+        // arrows: true,
+        infinite: false,
+        speed: 500,
+        // fade: true,
+        // cssEase: 'linear',
+        prevArrow: $('.floor-nav-up'),
+        nextArrow: $('.floor-nav-down')
+    });
+
     /*переменная слайдера*/
     var $buildingSlider = $('.building-slider');
 

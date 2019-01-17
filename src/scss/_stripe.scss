@@ -201,7 +201,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        //height: 100%;
         padding: 40px 16px;
         opacity: 0;
         visibility: hidden;
@@ -217,6 +217,7 @@
         &__head {
             position: relative;
             min-height: 120px;
+            padding: 0 33px;
 
             &::after {
                 content: '';
@@ -225,13 +226,6 @@
             }
         }
 
-        &__scheme {
-            text-align: center;
-
-            img {
-                display: inline-block;
-            }
-        }
 
         &__point {
             float: left;
@@ -367,6 +361,93 @@
             }
 
         }
+
+
+        &-scheme {
+            text-align: center;
+            position: relative;
+            //max-width: 800px;
+            //margin: 0 auto;
+
+            img {
+                display: inline-block;
+            }
+
+            &__slider {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .stripe-room {
+                opacity: .7;
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:hover {
+                    opacity: .8;
+                    transition: all .2s ease;
+                }
+            }
+
+            .stripe-room-1 {
+                fill: #8ac9df;
+            }
+
+            .stripe-room-2 {
+                fill: #f7cb4c;
+            }
+
+            .stripe-room-3 {
+                fill: #7fc8af;
+            }
+
+            &__room {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__points {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &__point {
+                position: absolute;
+                padding: 5px 8px;
+                border-radius: 4px;
+                background-color: #1f87d8;
+                color: #ffffff;
+                font-size: 12px;
+                text-align: center;
+                z-index: 56;
+                cursor: pointer;
+
+                span {
+                    display: block;
+                    margin-bottom: 2px;
+                }
+
+                &.disabled {
+                    background-color: #818f99;
+                }
+
+            }
+
+
+        }
+
+
     }
 
     &-legends {
@@ -429,16 +510,25 @@
     &-apartment {
         background-color: #fff;
         position: absolute;
-        z-index: 12;
+        z-index: -1;
         top: 0;
         left: 50%;
         transform:translateX(-50%);
         width: 960px;
-        height: 100%;
+        //height: 100%;
         padding: 40px 30px;
         border-left: 3px solid #ebf5f7;
         border-right: 3px solid #ebf5f7;
-        display: none;
+        opacity: 0;
+
+
+        &.is-show {
+            z-index: 12;
+            opacity: 1;
+            visibility: visible;
+            transition: all .2s ease;
+
+        }
 
         .floor-nav-content {
             padding: 10px 0;
@@ -446,6 +536,7 @@
 
         .stripe-floor__head {
             margin-bottom: 45px;
+            padding: 0;
         }
 
         .stripe-apartment__body {
@@ -486,7 +577,7 @@
         }
 
         &-btns {
-            width: 20%;
+            width: 22%;
 
             &__item {
                 margin-bottom: 17px;
@@ -534,6 +625,7 @@
             right: 20px;
             width: 30px;
             height: 30px;
+            z-index: 10;
             &::before {
                 content: '';
                 border: none;
@@ -636,8 +728,39 @@
             display: block;
         }
     }
+
+    .stripe-apartment {
+        width: 100%;
+    }
 }
 
+@media (max-width:890px){
+    .stripe-apartment .stripe-apartment__body {
+        flex-flow: row wrap;
+    }
+
+    .stripe-apartment-info {
+        width: 30%;
+    }
+    .stripe-apartment__scheme {
+        width: 70%;
+        text-align: left;
+    }
+
+    .stripe-apartment-btns {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .stripe-apartment-btns__item {
+        display: inline-block;
+        margin: 0 6px 6px;
+    }
+
+    .stripe-apartment {
+        padding: 40px 16px;
+    }
+}
 @media (max-width:800px){
 
 
@@ -693,6 +816,71 @@
         padding: 10px;
         margin-bottom: 17px;
     }
+
+    .stripe-apartment-info {
+        width: 35%;
+    }
+
+    .stripe-apartment__scheme {
+        width: 65%;
+    }
+}
+
+@media (max-width:580px){
+    .stripe-apartment .stripe-point {
+        display: none;
+    }
+    .stripe-apartment .stripe-floor__num {
+        position: static;
+        transform: none;
+        text-align: left;
+    }
+
+    .stripe-floor__num .floor-return {
+        text-align: left;
+    }
+
+    .stripe-apartment .stripe-floor__head {
+        margin-bottom: 30px;
+        min-height: 0;
+    }
+
+    .stripe-apartment {
+        padding: 20px 16px;
+    }
+
+    .stripe-floor__num .floor-nav-pos {
+        font-size: 26px;
+    }
+
+    .stripe-apartment .floor-nav-content {
+        padding: 0;
+    }
+
+    .stripe-floor__num .floor-return {
+        font-size: 14px;
+    }
+
+    .stripe-apartment-info {
+        width: 100%;
+    }
+
+    .stripe-apartment__scheme {
+        width: 100%;
+    }
+
+    .stripe-apartment .stripe-apartment__body {
+        display: block;
+    }
+
+    .stripe-apartment-btns__item {
+        display: block;
+        margin: 0 0 18px;
+    }
+    .stripe-apartment-btn {
+        display: block;
+        width: 100%;
+    }
 }
 
 
@@ -713,6 +901,8 @@
         width: auto;
         height: auto;
     }
+
+
 }
 
 
