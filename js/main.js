@@ -31,8 +31,15 @@ $(document).ready(function() {
     $(document).on('click', '.stripe-popup-close', function(e){
         e.preventDefault();
         $(this).parent().removeClass('is-show');
-
+        scrollTop('.stripe');
         $('.stripe-section-mobile__item').removeClass('active');
+    });
+
+    $(document).on('click', '.floor-return a', function(e){
+        e.preventDefault();
+        $(this).parents('.stripe-apartment').removeClass('is-show');
+        scrollTop('.stripe-floor');
+        // $('.stripe-section-mobile__item').removeClass('active');
     });
 
     $(document).on('click', '.stripe-legend-mobile', function(e){
