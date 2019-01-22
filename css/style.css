@@ -2607,6 +2607,8 @@ html {
         fill: #f7cb4c; }
       .stripe-floor-scheme .stripe-room-3 {
         fill: #7fc8af; }
+      .stripe-floor-scheme .stripe-room-studio {
+        fill: #5fc5d3; }
       .stripe-floor-scheme__room {
         position: absolute;
         top: 0;
