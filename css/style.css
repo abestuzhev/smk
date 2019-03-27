@@ -2961,6 +2961,21 @@ html {
 /*END новое оформление покупки квартиры*/
 /*-----------------------------------*/
 /*-----------------------------------*/
+.stripe-floor-scheme .pic-on.v2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none; }
+
+.stripe-apartment.is-show {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15); }
+
+.stripe-room-bonapart {
+  fill: #5fc5d3; }
+
 @media (min-width: 768px) {
   .container, .header {
     width: 760px; } }
