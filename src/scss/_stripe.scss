@@ -933,3 +933,22 @@
 .stripe-room-bonapart {
     fill:#5fc5d3;
 }
+
+@media (max-width: 700px){
+
+    .stripe-bonapart .stripe-floor {
+        display: block !important;
+        z-index: 10;
+        visibility: visible;
+    }
+
+
+    .stripe-bonapart .stripe-floor .stripe-popup-close {
+        display: none;
+    }
+
+    .stripe-bonapart .stripe-section-mobile,
+    .stripe-bonapart .floor-nav {
+        display: none;
+    }
+}
